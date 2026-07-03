@@ -1,9 +1,23 @@
 package pharmaceutical
 
-import "github.com/boundedinfinity/canonical-model/go/idiomatic/ider"
+import (
+	"github.com/boundedinfinity/canonical-model/go/idiomatic/ider"
+	"github.com/boundedinfinity/canonical-model/go/idiomatic/medical/condition"
+	"github.com/boundedinfinity/canonical-model/go/idiomatic/modeller"
+)
 
-type PhramaceuticalModel struct {
-	Id          ider.Id `json:"id"`
-	Name        string  `json:"name"`
-	Description string  `json:"description"`
+type Phramaceutical struct {
+	Id          ider.Id               `json:"id"`
+	Name        string                `json:"name"`
+	Alias       []string              `json:"aliases"`
+	Description string                `json:"description"`
+	Treats      []condition.Condition `json:"treats"`
+}
+
+func (this Phramaceutical) Kind() string {
+	return "canonical.medical.pharmacetical"
+}
+
+func (this Phramaceutical) MarshalJSON() ([]byte, error) {
+	return modeller.CanonicalJsonMarshal(this)
 }

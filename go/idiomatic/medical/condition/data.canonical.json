@@ -1,0 +1,12 @@
+[
+    {
+        "id": "D0705552-46D5-4023-B76C-7EFB27C9ED6A",
+        "name": "Type 1 Diabetes",
+        "description": "An autoimmune disease where the body's immune system attacks and destroys insulin-producing cells in the pancreas."
+    },
+    {
+        "id": "8C416E1A-3025-456F-8818-F9F1A358ED01",
+        "name": "Type 2 Diabetes",
+        "description": "A disease where the body becomes resistant to insulin or doesn't make enough. It is strongly tied to genetics, lifestyle, and age, but can often be managed or delayed."
+    }
+]

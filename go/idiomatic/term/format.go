@@ -64,3 +64,5 @@ func formatTerm(format Format, term Term) (string, error) {
 
 	return s, nil
 }
+
+

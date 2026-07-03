@@ -1,5 +1,0 @@
-kinds:
-  - type: canonical:time/datetime
-    description: Timestamp
-    kind: string
-    format: date-time

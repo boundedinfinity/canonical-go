@@ -1,9 +1,0 @@
-kinds:
-  - type: canonical:contact/role
-    name: role
-    properties:
-      - kind: ref
-        ref: canonical://business
-        name: Business
-      - kind: array
-        items:

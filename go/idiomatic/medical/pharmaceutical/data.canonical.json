@@ -1,0 +1,18 @@
+[
+    {
+        "kind": "canonical.medical.pharmacetical",
+        "id": "231443DF-1343-4BB4-B538-75AB9D98F5D4",
+        "name": "Jardiance",
+        "aliases": ["Empagliflozin"],
+        "description": "Lower blood sugar",
+        "treats": ["8C416E1A-3025-456F-8818-F9F1A358ED01"]
+    },
+    {
+        "kind": "canonical.medical.pharmacetical",
+        "id": "868D8A0A-4003-45A7-9A98-41F16AAF79A6",
+        "name": "Metformin Hydrochloride",
+        "aliases": ["Metformin", "Glucophage", "Glumetza", "Fortamet"],
+        "description": "Used to support insulin sensitivity and glucose regulation",
+        "treats": ["8C416E1A-3025-456F-8818-F9F1A358ED01"]
+    }
+]

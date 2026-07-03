@@ -1,7 +1,0 @@
-kinds:
-  - type: canonical:banking/card-type
-    description: Card Type
-    kind: string
-    enum:
-      - Credit
-      - Debit

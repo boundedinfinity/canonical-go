@@ -1,4 +1,0 @@
-kinds:
-  - type: canonical:util/email
-    kind: string
-    max: 200

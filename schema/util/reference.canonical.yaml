@@ -1,6 +1,0 @@
-kinds:
-  - type: canonical:util/reference
-    kind: object
-    properties:
-      - kind: canonical:util/name-20
-      - urls:

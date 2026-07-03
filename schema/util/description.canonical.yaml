@@ -1,6 +1,0 @@
-kinds:
-  - type: canonical:util/description
-    kind: string
-    name: description
-    min: 5
-    max: 200

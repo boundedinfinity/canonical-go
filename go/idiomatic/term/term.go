@@ -1,6 +1,7 @@
 package term
 
 import (
+	"github.com/boundedinfinity/canonical-model/go/idiomatic/digital/bookmark"
 	"github.com/boundedinfinity/canonical-model/go/idiomatic/ider"
 	"github.com/boundedinfinity/go-commoner/errorer"
 )
@@ -13,10 +14,11 @@ import (
 //
 // Otherwise, the name of the term will be used as the stringrepresentation.
 type Term struct {
-	Id            ider.Id  `json:"id"`
-	Name          string   `json:"name"`
-	Abbreviations []string `json:"abbreviations"`
-	Description   string   `json:"description"`
+	Id            ider.Id             `json:"id"`
+	Name          string              `json:"name"`
+	Abbreviations []string            `json:"abbreviations"`
+	Description   string              `json:"description"`
+	Bookmarks     []bookmark.Bookmark `json:"bookmarks"`
 }
 
 func (this Term) String() string {
