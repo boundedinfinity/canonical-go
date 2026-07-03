@@ -1,0 +1,23 @@
+package contact
+
+// https://en.wikipedia.org/wiki/VCard
+
+import (
+	"github.com/boundedinfinity/canonical-go/idiomatic/ider"
+	"github.com/boundedinfinity/canonical-go/idiomatic/location/mailing_address"
+	"github.com/boundedinfinity/canonical-go/idiomatic/person"
+	"github.com/boundedinfinity/canonical-go/idiomatic/phone"
+)
+
+type Contact struct {
+	Id              ider.Id                 `json:"id,omitempty"`
+	Person          person.Person           `json:"person,omitempty"`
+	Relationships   []Relationship          `json:"relationships,omitempty"`
+	Telephones      []phone.Phone           `json:"phone,omitempty"`
+	MailingAddress  mailing_address.Address `json:"mailing-address,omitempty"`
+	DeliveryAddress mailing_address.Address `json:"delivery-address,omitempty"`
+}
+
+func (t Contact) Name() string {
+	return t.Person.String()
+}

@@ -1,0 +1,22 @@
+package phone
+
+import (
+	"github.com/boundedinfinity/canonical-go/idiomatic/ider"
+	"github.com/boundedinfinity/canonical-go/idiomatic/label"
+	"github.com/boundedinfinity/canonical-go/idiomatic/phone/carrier"
+	"github.com/boundedinfinity/canonical-go/idiomatic/phone/number"
+	"github.com/boundedinfinity/go-commoner/errorer"
+)
+
+var (
+	ErrPhone = errorer.New("phone")
+)
+
+type Phone struct {
+	Id      ider.Id         `json:"id"`
+	Name    string          `json:"name"`
+	Number  number.Number   `json:"number"`
+	Carrier carrier.Carrier `json:"carrier"`
+	Kind    Kind            `json:"kind"`
+	Labels  []label.Label   `json:"labels"`
+}

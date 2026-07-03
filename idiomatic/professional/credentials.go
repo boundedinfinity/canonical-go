@@ -1,0 +1,14 @@
+package professional
+
+import (
+	"github.com/boundedinfinity/canonical-go/idiomatic/ider"
+	"github.com/boundedinfinity/canonical-go/idiomatic/person/affix"
+)
+
+type Credentials struct {
+	Id          ider.Id       `json:"id"`
+	Name        string        `json:"name"`
+	Description string        `json:"description"`
+	Prefix      []affix.Affix `json:"prefix"`
+	Suffix      []affix.Affix `json:"suffix"`
+}

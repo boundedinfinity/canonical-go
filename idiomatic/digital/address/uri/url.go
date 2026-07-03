@@ -1,0 +1,12 @@
+package uri
+
+import (
+	"github.com/boundedinfinity/canonical-go/idiomatic/ider"
+	"github.com/boundedinfinity/canonical-go/idiomatic/specification/rfc/rfc2396"
+)
+
+type Url struct {
+	Id      ider.Id     `json:"id"`
+	Name    string      `json:"name"`
+	Address rfc2396.Url `json:"address"`
+}

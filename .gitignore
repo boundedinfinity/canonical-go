@@ -1,2 +1,5 @@
 .DS_Store
 __MACOSX/
+**/*.gen.go
+**/*.enum.go
+**/*.db

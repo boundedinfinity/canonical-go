@@ -3,27 +3,33 @@ m   := "updates"
 list:
     just --list
 
-git-push:
-    git add . || true
-    git commit -m "{{ m }}" || true
-    git push origin master
-
-test:
-	cd example/go && just test
+purge:
+	find . -name '*.enum.go' -type f -delete
+	find . -name '*.gen.go' -type f -delete
 
 generate:
-	cd example/go && just generate
+	@just purge
+	go generate ./...
+
+test:
+	go test ./...
+
+build:
+	@just purge
+	@just generate
+	go build .
 
 commit:
 	git add . || true
 	git commit -m "{{ m }}" || true
 
-tag:
-	git tag -a $(tag) -m "$(tag)"
-	git push origin $(tag)
-
 push: commit
 	git push origin master
 
-docs-dev:
-	cd $(justfile_dir)/docs && just dev
+tag tag:
+	git tag -a {{ tag }} -m "{{ tag }}"
+	git push origin {{ tag }}
+
+publish:
+	just commit m={{ m }}
+	just tag tag={{ m }}

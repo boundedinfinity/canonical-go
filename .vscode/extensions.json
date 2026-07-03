@@ -3,6 +3,7 @@
         "redhat.vscode-yaml",
         "EditorConfig.EditorConfig",
         "golang.Go",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "skellock.just"
     ]
 }
