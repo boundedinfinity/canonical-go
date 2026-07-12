@@ -1,6 +1,12 @@
-package tempurature
+package temperature
+
+import "github.com/boundedinfinity/go-commoner/idiomatic/stringer"
 
 type Scale string
+
+func (s Scale) String() string {
+	return string(s)
+}
 
 var Scales = scales{
 	Celsius:    "measurement.scale.celsius",
@@ -28,4 +34,8 @@ type scales struct {
 	GasMark    Scale
 	Leiden     Scale
 	Wedgwood   Scale
+}
+
+func clean(v Scale) string {
+	return stringer.ReplaceAll(v, "measurement.scale.", "")
 }

@@ -1,4 +1,4 @@
-package usb
+package universal_serial_bus
 
 type Connector string
 

@@ -1,0 +1,5 @@
+- [wikipedia : Temperature measurement](https://en.wikipedia.org/wiki/Temperature_measurement)
+- [wikipedia : Conversion of scales of temperature](https://en.wikipedia.org/wiki/Conversion_of_scales_of_temperature)
+- [wikipedia : Gas mark](https://en.wikipedia.org/wiki/Gas_mark)
+- [wikipedia : Leiden scale](https://en.wikipedia.org/wiki/Leiden_scale)
+- [wikipedia : Wedgwood scale](https://en.wikipedia.org/wiki/Wedgwood_scale)
