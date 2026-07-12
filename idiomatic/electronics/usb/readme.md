@@ -1,0 +1,1 @@
+- [wikipedia : USB hardware](https://en.wikipedia.org/wiki/USB_hardware)

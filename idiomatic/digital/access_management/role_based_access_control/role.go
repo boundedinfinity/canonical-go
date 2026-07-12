@@ -5,7 +5,7 @@ import (
 	"github.com/boundedinfinity/canonical-go/idiomatic/ider"
 )
 
-type RoleModel struct {
+type Role struct {
 	ID          ider.Id           `json:"id"`
 	Name        string            `json:"name"`
 	Description string            `json:"description,omitempty"`
