@@ -28,58 +28,34 @@ func (this Range) ToScale(scale Scale) Range {
 	}
 }
 
-func (this Range) Celcius() Range {
-	return Range{
-		Min: this.Min.Celsius(),
-		Max: this.Max.Celsius(),
-	}
+func (this Range) Celsius() Range {
+	return this.ToScale(Scales.Celsius)
 }
 
 func (this Range) Fahrenheit() Range {
-	return Range{
-		Min: this.Min.Fahrenheit(),
-		Max: this.Max.Fahrenheit(),
-	}
+	return this.ToScale(Scales.Fahrenheit)
 }
 
 func (this Range) Kelvin() Range {
-	return Range{
-		Min: this.Min.Kelvin(),
-		Max: this.Max.Kelvin(),
-	}
+	return this.ToScale(Scales.Kelvin)
 }
 
 func (this Range) Rankine() Range {
-	return Range{
-		Min: this.Min.Rankine(),
-		Max: this.Max.Rankine(),
-	}
+	return this.ToScale(Scales.Rankine)
 }
 
 func (this Range) Delisle() Range {
-	return Range{
-		Min: this.Min.Delisle(),
-		Max: this.Max.Delisle(),
-	}
+	return this.ToScale(Scales.Delisle)
 }
 
 func (this Range) Newton() Range {
-	return Range{
-		Min: this.Min.Newton(),
-		Max: this.Max.Newton(),
-	}
+	return this.ToScale(Scales.Newton)
 }
 
 func (this Range) Reaumur() Range {
-	return Range{
-		Min: this.Min.Reaumur(),
-		Max: this.Max.Reaumur(),
-	}
+	return this.ToScale(Scales.Reaumur)
 }
 
 func (this Range) Romer() Range {
-	return Range{
-		Min: this.Min.Romer(),
-		Max: this.Max.Romer(),
-	}
+	return this.ToScale(Scales.Romer)
 }
