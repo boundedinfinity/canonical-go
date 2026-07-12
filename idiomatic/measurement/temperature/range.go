@@ -12,12 +12,7 @@ func (this Range) String() string {
 }
 
 func (this Range) In(temp Temperature) bool {
-	r := this
-
-	if temp.Scale != this.Min.Scale || temp.Scale != this.Max.Scale {
-		r = this.ToScale(temp.Scale)
-	}
-
+	r := this.ToScale(temp.Scale)
 	return temp.Value >= r.Min.Value && temp.Value <= r.Max.Value
 }
 
