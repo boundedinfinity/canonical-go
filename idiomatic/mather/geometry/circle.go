@@ -7,20 +7,22 @@ import (
 	"github.com/boundedinfinity/go-commoner/idiomatic/mather/trigonometry"
 )
 
-func NewCircle(center CartesianCoordinate, radius numberer.Number) Circle {
+func NewCircle(center CartesianCoordinate, radius numberer.Number, description string) Circle {
 	return Circle{
-		Center: center,
-		Radius: radius,
+		Center:      center,
+		Radius:      radius,
+		Description: description,
 	}
 }
 
-func NewCircleXY(x, y, radius numberer.Number) Circle {
-	return NewCircle(CartesianCoordinate{X: x, Y: y}, radius)
+func NewCircleXY(x, y, radius numberer.Number, description string) Circle {
+	return NewCircle(CartesianCoordinate{X: x, Y: y}, radius, description)
 }
 
 type Circle struct {
-	Center CartesianCoordinate
-	Radius numberer.Number
+	Center      CartesianCoordinate `json:"center"`
+	Radius      numberer.Number     `json:"radius"`
+	Description string              `json:"description"`
 }
 
 func (t Circle) Diameter() numberer.Number {

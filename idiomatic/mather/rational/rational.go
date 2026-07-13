@@ -11,14 +11,14 @@ import (
 // Constructors
 // ----------------------------------------------------------------------------------------------------
 
-func New[T ~int](whole, numerator, denominator T) Rational[T] {
+func New[T mather.Integer](whole, numerator, denominator T) Rational[T] {
 	return Rational[T]{
 		Whole:    whole,
 		Fraction: fraction.New(numerator, denominator),
 	}
 }
 
-func FromString[T ~int, S ~string](s S) (Rational[T], error) {
+func FromString[T mather.Integer, S ~string](s S) (Rational[T], error) {
 	n, err := strconv.ParseFloat(string(s), 64)
 
 	if err != nil {
@@ -32,7 +32,7 @@ func FromString[T ~int, S ~string](s S) (Rational[T], error) {
 // Type
 // ----------------------------------------------------------------------------------------------------
 
-type Rational[T ~int] struct {
+type Rational[T mather.Integer] struct {
 	Whole    T
 	Fraction fraction.Fraction[T]
 }
@@ -108,12 +108,12 @@ func (t Rational[T]) Improper() Rational[T] {
 // Helpers
 // ----------------------------------------------------------------------------------------------------
 
-func IsZero[T ~int](elem Rational[T]) bool {
+func IsZero[T mather.Integer](elem Rational[T]) bool {
 	var zero Rational[T]
 	return elem == zero
 }
 
-func MustString[T ~int, S ~string](s S) Rational[T] {
+func MustString[T mather.Integer, S ~string](s S) Rational[T] {
 	n, err := strconv.ParseFloat(string(s), 64)
 
 	if err != nil {
@@ -123,7 +123,7 @@ func MustString[T ~int, S ~string](s S) Rational[T] {
 	return FromFloat[T](n)
 }
 
-func FromFloat[T ~int, F mather.Float](n F) Rational[T] {
+func FromFloat[T mather.Integer, F mather.Float](n F) Rational[T] {
 	return Rational[T]{
 		Whole:    T(n),
 		Fraction: fraction.FromFloat[T](n),
@@ -138,6 +138,6 @@ func FractionComponent[T mather.Float](x T) int {
 	return fraction.Component(x)
 }
 
-func Fraction[T ~int, F mather.Float](x F) fraction.Fraction[T] {
+func Fraction[T mather.Integer, F mather.Float](x F) fraction.Fraction[T] {
 	return fraction.FromFloat[T](x)
 }

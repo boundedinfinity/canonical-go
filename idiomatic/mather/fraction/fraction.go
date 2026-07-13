@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/boundedinfinity/go-commoner/functional/optioner"
 	"github.com/boundedinfinity/go-commoner/idiomatic/mather"
 	"github.com/boundedinfinity/go-commoner/idiomatic/stringer"
 )
@@ -13,7 +12,7 @@ import (
 // Constructors
 // ----------------------------------------------------------------------------------------------------
 
-func New[T ~int](numerator, denominator T) Fraction[T] {
+func New[T mather.Integer](numerator, denominator T) Fraction[T] {
 	return Fraction[T]{
 		Numerator:   numerator,
 		Denominator: denominator,
@@ -21,7 +20,7 @@ func New[T ~int](numerator, denominator T) Fraction[T] {
 }
 
 // FromFloat creates a Fraction from a floating point number.
-func FromFloat[T ~int, F mather.Float](n F) Fraction[T] {
+func FromFloat[T mather.Integer, F mather.Float](n F) Fraction[T] {
 	denominator := mather.FractionalPartPlace(n)
 	numerator := n * F(denominator)
 
@@ -35,15 +34,23 @@ func FromFloat[T ~int, F mather.Float](n F) Fraction[T] {
 // Type
 // ----------------------------------------------------------------------------------------------------
 
-type Fraction[T ~int] struct {
-	Numerator              T                       `json:"numerator"`
-	Denominator            T                       `json:"denominator"`
-	NumeratorDescription   optioner.Option[string] `json:"numerator-description"`
-	DenominatorDescription optioner.Option[string] `json:"denominator-description"`
+type Fraction[T mather.Integer] struct {
+	Numerator              T      `json:"numerator"`
+	Denominator            T      `json:"denominator"`
+	NumeratorDescription   string `json:"numerator-description"`
+	DenominatorDescription string `json:"denominator-description"`
 }
 
 func (t Fraction[T]) String() string {
 	return fmt.Sprintf("%d/%d", t.Numerator, t.Denominator)
+}
+
+func (t Fraction[T]) Description() string {
+	if t.NumeratorDescription == "" || t.DenominatorDescription == "" {
+		return ""
+	}
+
+	return fmt.Sprintf("%s/%s", t.NumeratorDescription, t.DenominatorDescription)
 }
 
 func (t Fraction[T]) Float() float64 {
@@ -91,7 +98,7 @@ func (t Fraction[T]) Enumerate(l, h T) []Fraction[T] {
 // Helpers
 // ----------------------------------------------------------------------------------------------------
 
-func IsZero[T ~int](elem Fraction[T]) bool {
+func IsZero[T mather.Integer](elem Fraction[T]) bool {
 	var zero Fraction[T]
 	return elem == zero
 }
