@@ -1,0 +1,2 @@
+- https://docs.nats.io/using-nats/developer/receiving/structure#go
+- https://docs.nats.io/using-nats/developer/sending/structure
