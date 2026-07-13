@@ -3,13 +3,10 @@ package payment_card
 import (
 	"github.com/boundedinfinity/canonical-go/idiomatic/ider"
 	"github.com/boundedinfinity/canonical-go/idiomatic/location/postal_code"
-	"github.com/boundedinfinity/canonical-go/idiomatic/modeller"
 	"github.com/boundedinfinity/canonical-go/idiomatic/person"
 	"github.com/boundedinfinity/canonical-go/idiomatic/person/name"
 	"github.com/boundedinfinity/rfc3339date"
 )
-
-var _ modeller.Modeller = &Card{}
 
 type Card struct {
 	Id               ider.Id                 `json:"id"`

@@ -3,7 +3,6 @@ package pharmaceutical
 import (
 	"github.com/boundedinfinity/canonical-go/idiomatic/ider"
 	"github.com/boundedinfinity/canonical-go/idiomatic/medical/condition"
-	"github.com/boundedinfinity/canonical-go/idiomatic/modeller"
 )
 
 type Phramaceutical struct {
@@ -16,8 +15,4 @@ type Phramaceutical struct {
 
 func (this Phramaceutical) Kind() string {
 	return "canonical.medical.pharmacetical"
-}
-
-func (this Phramaceutical) MarshalJSON() ([]byte, error) {
-	return modeller.CanonicalJsonMarshal(this)
 }

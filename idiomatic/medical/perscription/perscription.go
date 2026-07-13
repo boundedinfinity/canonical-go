@@ -6,7 +6,6 @@ import (
 	"github.com/boundedinfinity/canonical-go/idiomatic/ider"
 	"github.com/boundedinfinity/canonical-go/idiomatic/medical/amount"
 	"github.com/boundedinfinity/canonical-go/idiomatic/medical/pharmaceutical"
-	"github.com/boundedinfinity/canonical-go/idiomatic/modeller"
 	"github.com/boundedinfinity/canonical-go/idiomatic/person"
 	"github.com/boundedinfinity/canonical-go/idiomatic/phone"
 	"github.com/boundedinfinity/rfc3339date"
@@ -33,8 +32,4 @@ type PerscriptionModel struct {
 
 func (this PerscriptionModel) Kind() string {
 	return "canonical.medical.prescription"
-}
-
-func (this PerscriptionModel) MarshalJSON() ([]byte, error) {
-	return modeller.CanonicalJsonMarshal(this)
 }

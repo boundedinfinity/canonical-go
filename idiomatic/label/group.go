@@ -1,6 +1,8 @@
 package label
 
 import (
+	"encoding/json"
+
 	"github.com/boundedinfinity/canonical-go/idiomatic/ider"
 )
 
@@ -32,4 +34,16 @@ func (this *Group) Add(labels ...Label) {
 
 func (this Group) Has(label Label) bool {
 	return this.Labels.Has(label)
+}
+
+func (this Group) MarshalJSON() ([]byte, error) {
+	v := struct {
+		Kind string `json:"kind"`
+		Group
+	}{
+		Kind:  "canonical.label.group",
+		Group: this,
+	}
+
+	return json.Marshal(v)
 }

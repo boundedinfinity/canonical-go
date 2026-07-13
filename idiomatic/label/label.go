@@ -1,6 +1,8 @@
 package label
 
 import (
+	"encoding/json"
+
 	"github.com/boundedinfinity/canonical-go/idiomatic/ider"
 )
 
@@ -22,4 +24,16 @@ type Label struct {
 	Name         string  `json:"name"`
 	Description  string  `json:"description"`
 	Abbreviation string  `json:"abbreviation,omitempty"`
+}
+
+func (this Label) MarshalJSON() ([]byte, error) {
+	v := struct {
+		Kind string `json:"kind"`
+		Label
+	}{
+		Kind:  "canonical.label.label",
+		Label: this,
+	}
+
+	return json.Marshal(v)
 }

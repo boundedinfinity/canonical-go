@@ -1,1 +1,2 @@
 - [wikipedia : USB hardware](https://en.wikipedia.org/wiki/USB_hardware)
+- https://www.cablematters.com/Blog/USB-C/USB-Connector-Cable-Types
