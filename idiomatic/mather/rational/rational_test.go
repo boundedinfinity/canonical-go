@@ -15,17 +15,17 @@ func Test_Rational_String(t *testing.T) {
 	}{
 		{
 			name:     "1 1/2",
-			input:    rational.New[int](1, 1, 2),
+			input:    rational.New(1, 1, 2),
 			expected: "1 1/2",
 		},
 		{
 			name:     "1 3/2",
-			input:    rational.New[int](1, 3, 2),
+			input:    rational.New(1, 3, 2),
 			expected: "1 3/2",
 		},
 		{
 			name:     "1 3/2 -> 2 1/2",
-			input:    rational.New[int](1, 3, 2).Mixed(),
+			input:    rational.New(1, 3, 2).Mixed(),
 			expected: "2 1/2",
 		},
 	}
@@ -50,8 +50,8 @@ func Test_Rational_Reduce(t *testing.T) {
 	}{
 		{
 			name:     "3.75",
-			input:    rational.New[int](3, 75, 100),
-			expected: rational.New[int](3, 3, 4),
+			input:    rational.New(3, 75, 100),
+			expected: rational.New(3, 3, 4),
 		},
 	}
 
@@ -71,13 +71,13 @@ func Test_Rational_Mixed(t *testing.T) {
 	}{
 		{
 			name:     "14/3",
-			input:    rational.New[int](0, 14, 3),
-			expected: rational.New[int](4, 2, 3),
+			input:    rational.New(0, 14, 3),
+			expected: rational.New(4, 2, 3),
 		},
 		{
 			name:     "2 14/3",
-			input:    rational.New[int](2, 14, 3),
-			expected: rational.New[int](6, 2, 3),
+			input:    rational.New(2, 14, 3),
+			expected: rational.New(6, 2, 3),
 		},
 	}
 
@@ -97,18 +97,18 @@ func Test_Rational_Improper(t *testing.T) {
 	}{
 		{
 			name:     "2 8/32",
-			input:    rational.New[int](2, 8, 32).Reduce(),
-			expected: rational.New[int](0, 9, 4),
+			input:    rational.New(2, 8, 32).Reduce(),
+			expected: rational.New(0, 9, 4),
 		},
 		{
 			name:     "1 3/4",
-			input:    rational.New[int](1, 3, 4),
-			expected: rational.New[int](0, 7, 4),
+			input:    rational.New(1, 3, 4),
+			expected: rational.New(0, 7, 4),
 		},
 		{
 			name:     "3/4",
-			input:    rational.New[int](0, 3, 4),
-			expected: rational.New[int](0, 3, 4),
+			input:    rational.New(0, 3, 4),
+			expected: rational.New(0, 3, 4),
 		},
 	}
 

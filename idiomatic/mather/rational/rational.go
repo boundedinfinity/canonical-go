@@ -14,7 +14,7 @@ import (
 func New[T ~int](whole, numerator, denominator T) Rational[T] {
 	return Rational[T]{
 		Whole:    whole,
-		Fraction: fraction.New[T](numerator, denominator),
+		Fraction: fraction.New(numerator, denominator),
 	}
 }
 

@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"strconv"
 
+	"github.com/boundedinfinity/go-commoner/functional/optioner"
 	"github.com/boundedinfinity/go-commoner/idiomatic/mather"
 	"github.com/boundedinfinity/go-commoner/idiomatic/stringer"
 )
@@ -35,8 +36,10 @@ func FromFloat[T ~int, F mather.Float](n F) Fraction[T] {
 // ----------------------------------------------------------------------------------------------------
 
 type Fraction[T ~int] struct {
-	Numerator   T
-	Denominator T
+	Numerator              T                       `json:"numerator"`
+	Denominator            T                       `json:"denominator"`
+	NumeratorDescription   optioner.Option[string] `json:"numerator-description"`
+	DenominatorDescription optioner.Option[string] `json:"denominator-description"`
 }
 
 func (t Fraction[T]) String() string {
@@ -49,8 +52,10 @@ func (t Fraction[T]) Float() float64 {
 
 func (t Fraction[T]) Copy() Fraction[T] {
 	return Fraction[T]{
-		Numerator:   t.Numerator,
-		Denominator: t.Denominator,
+		Numerator:              t.Numerator,
+		Denominator:            t.Denominator,
+		NumeratorDescription:   t.NumeratorDescription,
+		DenominatorDescription: t.DenominatorDescription,
 	}
 }
 
@@ -58,8 +63,10 @@ func (t Fraction[T]) Reduce() Fraction[T] {
 	gcd := mather.GreatestCommonFactor(t.Numerator, t.Denominator)
 
 	return Fraction[T]{
-		Numerator:   t.Numerator / gcd,
-		Denominator: t.Denominator / gcd,
+		Numerator:              t.Numerator / gcd,
+		Denominator:            t.Denominator / gcd,
+		NumeratorDescription:   t.NumeratorDescription,
+		DenominatorDescription: t.DenominatorDescription,
 	}
 }
 
