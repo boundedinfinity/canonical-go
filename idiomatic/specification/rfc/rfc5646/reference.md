@@ -1,0 +1,2 @@
+- [ietf : RFC 5646 - Tags for Identifying Languages](https://datatracker.ietf.org/doc/html/rfc5646)
+- [mozilla : BCP 47 language tag](https://developer.mozilla.org/en-US/docs/Glossary/BCP_47_language_tag)
