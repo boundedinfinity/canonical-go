@@ -3,6 +3,7 @@ package marshal
 import (
 	"encoding/json"
 
+	"github.com/boundedinfinity/canonical-model/go/idiomatic/ider"
 	"github.com/boundedinfinity/go-commoner/errorer"
 )
 
@@ -16,7 +17,8 @@ var (
 )
 
 type descriminator struct {
-	Kind string `json:"kind"`
+	Kind string  `json:"kind"`
+	Id   ider.Id `json:"id"`
 }
 
 func Marshal[T any](kind string, v T) ([]byte, error) {

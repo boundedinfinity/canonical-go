@@ -2,7 +2,7 @@ package book_keeping
 
 import "github.com/boundedinfinity/canonical-go/idiomatic/ider"
 
-var StandardAccounts = []AccountModel{
+var StandardAccounts = []Account{
 	{
 		Id:   ider.MustParse("7620081B-D5DD-484C-BA8F-1BA0C1005914"),
 		Name: "Assets",

@@ -4,9 +4,9 @@ import (
 	"github.com/boundedinfinity/canonical-go/idiomatic/ider"
 )
 
-type BookModel struct {
-	Id          ider.Id       `json:"id"`
-	Name        string        `json:"name"`
-	Description string        `json:"description"`
-	Ledgers     []LedgerModel `json:"ledgers"`
+type Book struct {
+	Id          ider.Id  `json:"id"`
+	Name        string   `json:"name"`
+	Description string   `json:"description"`
+	Ledgers     []Ledger `json:"ledgers"`
 }

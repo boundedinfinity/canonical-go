@@ -14,12 +14,17 @@ type daysOfWeek struct {
 }
 
 var DaysOfWeek = daysOfWeek{
-	Unknown:   "time.day-of-week.unknown",
-	Monday:    "time.day-of-week.monday",
-	Tuesday:   "time.day-of-week.tuesday",
-	Wednesday: "time.day-of-week.wednesday",
-	Thursday:  "time.day-of-week.thursday",
-	Friday:    "time.day-of-week.friday",
-	Saturday:  "time.day-of-week.saturday",
-	Sunday:    "time.day-of-week.sunday",
+	Unknown:   "measurement.time.day-of-week.unknown",
+	Monday:    "measurement.time.day-of-week.monday",
+	Tuesday:   "measurement.time.day-of-week.tuesday",
+	Wednesday: "measurement.time.day-of-week.wednesday",
+	Thursday:  "measurement.time.day-of-week.thursday",
+	Friday:    "measurement.time.day-of-week.friday",
+	Saturday:  "measurement.time.day-of-week.saturday",
+	Sunday:    "measurement.time.day-of-week.sunday",
+}
+
+type DayOfWeekRange struct {
+	Min DayOfWeek `json:"min"`
+	Max DayOfWeek `json:"max"`
 }

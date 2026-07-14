@@ -7,7 +7,7 @@ import (
 	"github.com/boundedinfinity/canonical-go/idiomatic/label"
 )
 
-type VendorModel struct {
+type Vendor struct {
 	Id          ider.Id           `json:"id"`
 	Name        string            `json:"name"`
 	Description string            `json:"description"`

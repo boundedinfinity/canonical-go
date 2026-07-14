@@ -17,11 +17,11 @@ type TransactionModel struct {
 	Id                ider.Id       `json:"id"`
 	Name              string        `json:"name"`
 	Description       string        `json:"description"`
-	Source            AccountModel  `json:"source"`
-	Destination       AccountModel  `json:"destination"`
+	Source            Account       `json:"source"`
+	Destination       Account       `json:"destination"`
 	SourceAmount      float64       `json:"source-amount"`
 	DestinationAmount float64       `json:"destination-amount"`
-	Vendor            VendorModel   `json:"vendor"`
-	Client            ClientModel   `json:"client"`
+	Vendor            Vendor        `json:"vendor"`
+	Client            Client        `json:"client"`
 	Labels            []label.Label `json:"labels"`
 }

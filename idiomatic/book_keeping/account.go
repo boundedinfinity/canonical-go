@@ -3,17 +3,19 @@ package book_keeping
 import (
 	"github.com/boundedinfinity/canonical-go/idiomatic/ider"
 	"github.com/boundedinfinity/canonical-go/idiomatic/label"
+	"github.com/boundedinfinity/canonical-go/idiomatic/measurement/time"
 )
 
-type AccountModel struct {
+type Account struct {
 	Id           ider.Id            `json:"id"`
 	Name         string             `json:"name"`
 	Kind         Kind               `json:"kind"`
 	Description  string             `json:"description"`
 	Transactions []TransactionModel `json:"transactions"`
-	Parent       *AccountModel      `json:"parent"`
-	Children     []*AccountModel    `json:"children"`
-	Labels       []label.Labels     `json:"labels"`
-	Vendor       *VendorModel       `json:"vendor"`
-	Client       *ClientModel       `json:"client"`
+	Parent       *Account           `json:"parent"`
+	Children     []*Account         `json:"children"`
+	Labels       []label.Label      `json:"labels"`
+	Vendor       *Vendor            `json:"vendor"`
+	Client       *Client            `json:"client"`
+	CreatedAt    time.Timestamp     `json:"created-at"`
 }

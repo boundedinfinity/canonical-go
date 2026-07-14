@@ -5,7 +5,7 @@ import (
 	"github.com/boundedinfinity/canonical-go/idiomatic/label"
 )
 
-type TrialModel struct {
+type Trial struct {
 	Id           ider.Id            `json:"id"`
 	Name         string             `json:"name"`
 	Description  string             `json:"description"`
@@ -15,7 +15,7 @@ type TrialModel struct {
 	creditNormal []TransactionModel
 }
 
-func (this TrialModel) Sort() {
+func (this Trial) Sort() {
 
 	for _, transaction := range this.Transactions {
 		switch transaction.Source.Kind {
@@ -27,7 +27,7 @@ func (this TrialModel) Sort() {
 	}
 }
 
-func (this TrialModel) Calculate() {
+func (this Trial) Calculate() {
 	this.Sort()
 
 	var debitNormalTotal float64
