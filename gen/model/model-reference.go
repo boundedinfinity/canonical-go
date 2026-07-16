@@ -9,6 +9,6 @@ type ReferenceModel struct {
 	Reference string           `json:"reference"`
 }
 
-func (_ ReferenceModel) GetKind() Kind {
+func (_ ReferenceModel) Kind() Kind {
 	return Kinds.Reference
 }

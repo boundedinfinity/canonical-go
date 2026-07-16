@@ -7,7 +7,7 @@ type ObjectModel struct {
 	Properties []Property `json:"properties"`
 }
 
-func (_ ObjectModel) GetKind() Kind {
+func (_ ObjectModel) Kind() Kind {
 	return Kinds.Object
 }
 

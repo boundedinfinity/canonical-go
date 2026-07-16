@@ -12,6 +12,6 @@ type LanguageModel struct {
 	Database o.Option[Database] `json:"database"`
 }
 
-func (_ LanguageModel) GetKind() Kind {
+func (_ LanguageModel) Kind() Kind {
 	return Kinds.Language
 }

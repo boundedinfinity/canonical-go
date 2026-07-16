@@ -8,6 +8,6 @@ type EnumerationModel struct {
 	CaseInsensitive bool     `json:"case-insensitive"`
 }
 
-func (_ EnumerationModel) GetKind() Kind {
+func (_ EnumerationModel) Kind() Kind {
 	return Kinds.Enumeration
 }
