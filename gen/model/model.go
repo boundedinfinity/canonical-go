@@ -1,5 +1,5 @@
 package model
 
 type Model interface {
-	GetKind() Kind
+	Kind() Kind
 }
