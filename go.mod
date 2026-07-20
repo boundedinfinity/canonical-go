@@ -1,6 +1,6 @@
 module github.com/boundedinfinity/canonical-go
 
-go 1.25.0
+go 1.26.0
 
 require (
 	github.com/boundedinfinity/go-commoner v1.0.30

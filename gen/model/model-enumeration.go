@@ -11,3 +11,7 @@ type EnumerationModel struct {
 func (_ EnumerationModel) Kind() Kind {
 	return Kinds.Enumeration
 }
+
+func (this EnumerationModel) Validate() error {
+	return nil
+}

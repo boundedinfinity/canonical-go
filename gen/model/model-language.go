@@ -15,3 +15,7 @@ type LanguageModel struct {
 func (_ LanguageModel) Kind() Kind {
 	return Kinds.Language
 }
+
+func (this LanguageModel) Validate() error {
+	return nil
+}

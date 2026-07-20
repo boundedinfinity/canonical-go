@@ -12,3 +12,7 @@ type ReferenceModel struct {
 func (_ ReferenceModel) Kind() Kind {
 	return Kinds.Reference
 }
+
+func (this ReferenceModel) Validate() error {
+	return nil
+}

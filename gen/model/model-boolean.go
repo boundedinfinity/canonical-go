@@ -17,6 +17,10 @@ func (_ BooleanModel) Kind() Kind {
 	return Kinds.Boolean
 }
 
+func (this BooleanModel) Validate() error {
+	return nil
+}
+
 func Boolean(name string) *booleanBuilder {
 	return &booleanBuilder{model: &BooleanModel{Name: name}}
 }
