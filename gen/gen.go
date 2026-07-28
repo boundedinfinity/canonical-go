@@ -15,17 +15,17 @@ type generator struct {
 }
 
 func (this generator) Validate(config model.Config) error {
-	switch config.Language {
-	default:
-		errKindFunc("config.language not supported: %s", config.Language)
-	}
+	// switch config.Language {
+	// default:
+	// 	errKindFunc("config.language not supported: %s", config.Language)
+	// }
 
-	for i, k := range config.Kinds {
-		switch k.(type) {
-		default:
-			errKindFunc("config.kinds[%d] not supported: %s", i, k.GetKind())
-		}
-	}
+	// for i, k := range config.Kinds {
+	// 	switch k.(type) {
+	// 	default:
+	// 		errKindFunc("config.kinds[%d] not supported: %s", i, k.GetKind())
+	// 	}
+	// }
 
 	return nil
 }

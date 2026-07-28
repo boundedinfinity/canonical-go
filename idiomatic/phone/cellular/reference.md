@@ -1,0 +1,5 @@
+- https://en.wikipedia.org/wiki/Cellular_frequencies#See_also
+- https://en.wikipedia.org/wiki/5G_NR_frequency_bands
+- https://en.wikipedia.org/wiki/GSM_frequency_bands
+- https://en.wikipedia.org/wiki/CDMA_frequency_bands
+- https://en.wikipedia.org/wiki/LTE_frequency_bands
