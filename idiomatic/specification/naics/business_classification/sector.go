@@ -1,4 +1,4 @@
-package naics
+package business_classification
 
 // https://www.census.gov/naics/reference_files_tools/2022_NAICS_Manual.pdf
 
