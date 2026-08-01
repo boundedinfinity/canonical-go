@@ -1,8 +1,9 @@
-package settings
+package browser
 
 import (
 	"github.com/boundedinfinity/canonical-go/idiomatic/contact"
 	"github.com/boundedinfinity/canonical-go/idiomatic/ider"
+	"github.com/boundedinfinity/canonical-go/idiomatic/settings/bookmark"
 )
 
 type BrowserType struct {
@@ -15,10 +16,10 @@ type BrowserProfile struct {
 	Id   ider.Id `json:"id,omitempty"`
 	Name string  `json:"name,omitempty"`
 	// MachineId       id.MachineId      `json:"machine-id,omitempty"`
-	Type            BrowserType       `json:"browser-type,omitempty"`
-	Appearance      BrowserAppearance `json:"appearance,omitempty"`
-	Security        BrowserSecurity   `json:"security,omitempty"`
-	BookmarkManager BookmarkManager   `json:"bookmark-manager,omitempty"`
+	Type            BrowserType              `json:"browser-type,omitempty"`
+	Appearance      BrowserAppearance        `json:"appearance,omitempty"`
+	Security        BrowserSecurity          `json:"security,omitempty"`
+	BookmarkManager bookmark.BookmarkManager `json:"bookmark-manager,omitempty"`
 }
 
 type BrowserAppearance struct {

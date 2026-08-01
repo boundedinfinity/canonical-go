@@ -1,0 +1,42 @@
+
+
+   
+swimlane-beta LR
+    subgraph Motions
+        M[Motions]
+    end
+
+    subgraph Password Manager
+        PM[Password Manager]
+        PM_S[Password]
+        PM_F[Find]
+        PM_D[Delete]
+        PM_N[New]
+    end
+
+    subgraph Clipboard
+        CB[Clipboard]
+    end
+
+    subgraph Exit
+        Q[Quit]
+    end
+
+    M --> |Q| Q
+    M --> |P| PM
+    M --> |C| CB
+
+    PM --> |Q| Q
+    PM --> |B| M
+    PM --> |F| PM_F
+    PM --> |N| PM_N
+    PM_F --> |B| PM
+    PM_F --> PM_S
+    PM_S --> |B| PM_F
+    PM_S --> |C| CB
+    PM_S --> |D| PM_D
+    PM_D --> PM
+
+    CB --> |Q| Q
+    CB --> |B| M
+    
