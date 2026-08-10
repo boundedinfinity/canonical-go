@@ -1,6 +1,6 @@
 package keymap
 
-type ApplicationMessage struct {
+type ApplicationCommand struct {
 	Name        string
 	Application string
 	Message     string

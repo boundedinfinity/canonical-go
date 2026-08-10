@@ -1,5 +1,5 @@
 package keymap
 
 type Map interface {
-	Run(Key) []ApplicationMessage
+	Run(Key) []ApplicationCommand
 }
