@@ -1,5 +1,7 @@
 package keymap
 
 type Map interface {
-	Run(Key) []ApplicationCommand
+	OnKey(Key) (Map, []ApplicationCommand)
+	OnEvent(ApplicationEvent) (Map, []ApplicationCommand)
+	Available() []Map
 }
