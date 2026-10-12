@@ -1,0 +1,4 @@
+- https://sheecsocks.com/blogs/guides/types-of-socks
+- https://www.wikihow.com/Types-of-Socks
+- https://www.thefashionisto.com/articles/types-of-socks/
+- https://darntough.com/blogs/the-alternate-stitch/types-of-socks
