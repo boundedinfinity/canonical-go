@@ -6,7 +6,6 @@ import (
 )
 
 type Validator interface {
-	Name() string
 	Validate(a any) error
 }
 

@@ -5,7 +5,7 @@ The "base" struct for prefixes and suffixes used with personal names.
 
 ## Programmatic Information
 
-- ID: The [ID](../../id/id.md) of the affix
+- ID: The [Id](../../id/id.md) of the affix
 - Name:
     desc: the name of the affix 
     type: string

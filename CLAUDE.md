@@ -18,14 +18,16 @@ Every spec at `domain-model/<path>/<name>.md` maps to a Go file at `lang/go/<pat
   - Each type gets a constructor, `Parse` / `MustParse`, `String`, and `IsZero`, plus explicit `MarshalJSON` / `UnmarshalJSON` (encode as the spec's declared type, validate on decode, treat JSON `null` as a no-op) and `MarshalText` / `UnmarshalText` for map keys and other text encoders.
   - Validation rules from the spec's `validation:` list are enforced in `Parse` / `UnmarshalText`. Failures return an error that wraps a package-level `ErrInvalid` sentinel.
   - Tests are table-driven, live in `<pkg>_test`, and cover the valid cases, every validation rule, and a JSON round-trip.
-- **Struct models:** `lang/go/label` is the reference implementation for structs that hold several fields.
-  - Spec fields map to exported Go fields with lowercase JSON tags. A field whose spec type links to another spec uses that package's type, so `[ID](...)` becomes `id.ID`.
-  - Fields marked `optional: true` use `optioner.Option[string]` with the `omitzero` JSON tag.
-  - Length bounds become exported constants (`NameMin`, `NameMax`). Lengths are counted in runes.
-  - `Validate()` checks every field and returns all failures together via `errorer.Join`. Each failure wraps `ErrInvalid` plus a per-field sentinel such as `ErrName`. It calls `Validate()` on any nested types.
+- **Global notes:** `domain-model/domain-model.md` and `domain-model/global-notes/` apply to every model. `json.md` covers JSON tags (kebab-case field names, omitted when empty) and `sqlite.md` covers SQL generation (rowid primary key plus a unique `id` column for every **Top Level Model**). Read them before implementing a model.
+- **Struct models:** `lang/go/label` (scalar fields) and `lang/go/person/name` (list fields) are the reference implementations for structs that hold several fields.
+  - File order: `var` block (validators, errors), type, methods (`Validate`, JSON), then constructors (`New`, `MustNew`) at the bottom.
+  - Spec fields map to exported Go fields with kebab-case JSON tags. A field whose spec type links to another spec uses that package's type, so `[Id](...)` becomes `id.ID`.
+  - Optional scalars use `optioner.Option[T]` with the `omitzero` JSON tag. Optional lists (`type: List strings`) use a plain slice with `omitempty`: `nil` means absent, while a non-nil empty slice counts as present, so it fails "at least 1 element".
+  - Field rules are declared once as package-level validators built with `lang/go/validation`, e.g. `validation.String[string]("name").Min(1).Max(20)` or `validation.Slice[string]("first").Min(1).Each(elemValidator)`. String lengths count runes.
+  - `Validate()` checks every field (optional ones only when present) and returns all failures together via `errorer.Join`. Each failure wraps `ErrInvalid` plus a per-field sentinel such as `ErrName`. `ErrId` aliases `id.ErrInvalid`. It calls `Validate()` on any nested types, and cross-field rules from the spec's `# Validation` section get their own sentinel (e.g. `name.ErrRequired`).
   - `New(...)` creates a new `id.New()` and validates the result. `MustNew` panics instead of returning an error.
-  - `UnmarshalJSON` decodes through an alias type and then calls `Validate()`.
-- **Dependencies:** use the standard library plus go-commoner's `errorer` (errors, via `errorer.Func(ErrInvalid, ...)`) and `optioner` (optional fields). Tests also use `testify`. Don't import `idiomatic/` packages. Go 1.27 includes a standard `uuid` package, which `lang/go/id` uses.
+  - `MarshalJSON` / `UnmarshalJSON` go through an alias type. `UnmarshalJSON` calls `Validate()` and leaves the receiver untouched on error or JSON `null`.
+- **Dependencies:** use the standard library plus go-commoner's `errorer` (errors, via `errorer.Func(ErrInvalid, ...)`) and `optioner` (optional fields), and the in-repo `lang/go/validation` package for field rules. Tests also use `testify`. Don't import `idiomatic/` packages. Go 1.27 includes a standard `uuid` package, which `lang/go/id` uses.
 - **Spec format:** a spec's `## Programmatic Information` section lists each field with its `type`, `desc`, and `validation`. `## Notes` holds references and implementation hints, such as which library to use.
 - **Change order:** when a spec changes, update the `.md` first and then the generated language code. Don't add behavior to `lang/go` that the spec doesn't describe. If the spec is ambiguous, ask or update the spec.
 

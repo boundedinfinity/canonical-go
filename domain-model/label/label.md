@@ -6,8 +6,8 @@ This is a label for a document. These are user defined labels.
 
 ## Programmatic Information
 
-- ID
-    type: [ID](id.md)
+- Id
+    type: [Id](id.md)
     desc: The unique identifier of the label.
     validation:
         - call the validation on the ID
