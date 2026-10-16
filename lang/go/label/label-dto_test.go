@@ -11,12 +11,12 @@ import (
 )
 
 func Test_LabelDto_round_trip(t *testing.T) {
-	expected := label.MustNew("Date of Birth", "DOB", "When a person was born")
+	expected := label.MustNew("Date of Birth", []string{"DOB", "BD"}, "When a person was born")
 
 	dto := expected.ToDto()
 	assert.Equal(t, expected.Id, dto.Id)
 	assert.Equal(t, expected.Name, dto.Name)
-	assert.Equal(t, expected.Acronym, dto.Acronym)
+	assert.Equal(t, expected.Acronyms, dto.Acronyms)
 	assert.Equal(t, expected.Description, dto.Description)
 
 	actual, err := dto.ToModel()
@@ -35,7 +35,8 @@ func Test_LabelDto_Validate(t *testing.T) {
 		{name: "valid", input: label.LabelDto{Id: validId, Name: "n"}},
 		{name: "zero id", input: label.LabelDto{Name: "n"}, errs: []error{label.ErrId}},
 		{name: "name empty", input: label.LabelDto{Id: validId}, errs: []error{label.ErrName}},
-		{name: "short acronym", input: label.LabelDto{Id: validId, Name: "n", Acronym: optioner.Some("a")}, errs: []error{label.ErrAcronym}},
+		{name: "short acronym", input: label.LabelDto{Id: validId, Name: "n", Acronyms: optioner.Some([]string{"a"})}, errs: []error{label.ErrAcronyms}},
+		{name: "empty acronyms", input: label.LabelDto{Id: validId, Name: "n", Acronyms: optioner.Some([]string{})}, errs: []error{label.ErrAcronyms}},
 		{name: "empty description", input: label.LabelDto{Id: validId, Name: "n", Description: optioner.Some("")}, errs: []error{label.ErrDescription}},
 	}
 
@@ -61,8 +62,8 @@ func Test_LabelDto_Validate(t *testing.T) {
 func Test_LabelDto_JSON(t *testing.T) {
 	const rawId = "b12e7628-35b0-4ae5-b2d9-0f34f4828229"
 
-	input := label.LabelDto{Id: id.MustParse(rawId), Name: "Date of Birth", Acronym: optioner.Some("DOB")}
-	expected := `{"id":"` + rawId + `","name":"Date of Birth","acronym":"DOB"}`
+	input := label.LabelDto{Id: id.MustParse(rawId), Name: "Date of Birth", Acronyms: optioner.Some([]string{"DOB"})}
+	expected := `{"id":"` + rawId + `","name":"Date of Birth","acronyms":["DOB"]}`
 
 	data, err := json.Marshal(input)
 	assert.NoError(t, err)
@@ -82,7 +83,7 @@ func Test_LabelDto_UnmarshalJSON_invalid(t *testing.T) {
 }
 
 func Test_LabelDto_UnmarshalJSON_null(t *testing.T) {
-	expected := label.MustNew("n", "", "").ToDto()
+	expected := label.MustNew("n", nil, "").ToDto()
 	actual := expected
 
 	assert.NoError(t, json.Unmarshal([]byte(`null`), &actual))

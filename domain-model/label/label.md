@@ -16,12 +16,16 @@ This is a label for a document. These are user defined labels.
     desc: The name of the label.
     validation:
         - length >= 1 and <= 20
-- Acronym
-    type: string
+- Acronyms
+    type: list of strings
     optional: true
-    desc: A short acronym for the label.
+    desc: >
+        A short acronym for the label. 
+        
+        First item in the list is the "Primary" acronym.
     validation:
-        - length >= 2 and <= 10
+        - if present, at least 1 element
+        - each string length >= 2 and <= 10
 - Description
     type: string
     optional: true
@@ -33,5 +37,5 @@ This is a label for a document. These are user defined labels.
 
 - All required fields (see above) must be present.
 - `Name` length must be >= 1 and <= 20.
-- `Acronym`, if present, length must be >= 2 and <= 10.
-- `Desc`, if present, length must be >= 1 and <= 250.
+- `Acronyms`, if present, must contain at least 1 element, and each acronym length must be >= 2 and <= 10.
+- `Description`, if present, length must be >= 1 and <= 250.

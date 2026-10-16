@@ -14,7 +14,8 @@ import (
 
 var (
 	nameValidation        = validation.String[string]("name").Min(1).Max(20)
-	acronymValidation     = validation.String[string]("acronym").Min(2).Max(10)
+	acronymValidation     = validation.String[string]("").Min(2).Max(10)
+	acronymsValidation    = validation.Slice[string]("acronyms").Min(1).Each(acronymValidation)
 	descriptionValidation = validation.String[string]("description").Min(1).Max(250)
 
 	// ErrInvalid is wrapped by every Label validation error.
@@ -22,20 +23,23 @@ var (
 	ErrId          = id.ErrInvalid
 	ErrName        = errorer.New("name")
 	ErrAcronym     = errorer.New("acronym")
+	ErrAcronyms    = errorer.New("acronyms")
 	ErrDescription = errorer.New("description")
 
 	errIdFn          = errorer.Func(ErrInvalid, id.ErrInvalid)
 	errNameFn        = errorer.Func(ErrInvalid, ErrName)
-	errAcronymFn     = errorer.Func(ErrInvalid, ErrAcronym)
+	errAcronymsFn    = errorer.Func(ErrInvalid, ErrAcronyms)
 	errDescriptionFn = errorer.Func(ErrInvalid, ErrDescription)
 )
 
 // Label is a user defined label for a document.
+//
+// The first of the Acronyms is the label's primary acronym.
 type Label struct {
-	Id          id.ID                   `json:"id"`
-	Name        string                  `json:"name"`
-	Acronym     optioner.Option[string] `json:"acronym,omitzero"`
-	Description optioner.Option[string] `json:"description,omitzero"`
+	Id          id.ID                     `json:"id"`
+	Name        string                    `json:"name"`
+	Acronyms    optioner.Option[[]string] `json:"acronyms,omitzero"`
+	Description optioner.Option[string]   `json:"description,omitzero"`
 }
 
 // Validate checks every field and returns all failures joined together.
@@ -52,9 +56,9 @@ func (this Label) Validate() error {
 		errs = append(errs, errNameFn("%w", err))
 	}
 
-	if this.Acronym.Defined() {
-		if err := acronymValidation.Validate(this.Acronym.Get()); err != nil {
-			errs = append(errs, errAcronymFn("%w", err))
+	if this.Acronyms.Defined() {
+		if err := acronymsValidation.Validate(this.Acronyms.Get()); err != nil {
+			errs = append(errs, errAcronymsFn("%w", err))
 		}
 	}
 
@@ -98,12 +102,13 @@ func (this *Label) UnmarshalJSON(data []byte) error {
 }
 
 // New returns a validated Label with a new ID.
-// An empty acronym or description is treated as not present.
-func New(name, acronym, description string) (Label, error) {
+// A nil or empty acronyms slice, or an empty description, is treated as not
+// present.
+func New(name string, acronyms []string, description string) (Label, error) {
 	label := Label{
 		Id:          id.New(),
 		Name:        name,
-		Acronym:     optioner.OfZero(acronym),
+		Acronyms:    optioner.OfSlice(acronyms),
 		Description: optioner.OfZero(description),
 	}
 
@@ -115,8 +120,8 @@ func New(name, acronym, description string) (Label, error) {
 }
 
 // MustNew is like New but panics if the Label is invalid.
-func MustNew(name, acronym, description string) Label {
-	label, err := New(name, acronym, description)
+func MustNew(name string, acronyms []string, description string) Label {
+	label, err := New(name, acronyms, description)
 
 	if err != nil {
 		panic(err)

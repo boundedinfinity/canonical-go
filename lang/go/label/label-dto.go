@@ -12,10 +12,10 @@ import (
 // LabelDto is the data transfer object for Label. Label holds no other Top
 // Level Models, so LabelDto has the same fields.
 type LabelDto struct {
-	Id          id.ID                   `json:"id"`
-	Name        string                  `json:"name"`
-	Acronym     optioner.Option[string] `json:"acronym,omitzero"`
-	Description optioner.Option[string] `json:"description,omitzero"`
+	Id          id.ID                     `json:"id"`
+	Name        string                    `json:"name"`
+	Acronyms    optioner.Option[[]string] `json:"acronyms,omitzero"`
+	Description optioner.Option[string]   `json:"description,omitzero"`
 }
 
 // Validate applies the Label rules; see Label.Validate.
