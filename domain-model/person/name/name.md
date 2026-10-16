@@ -6,11 +6,18 @@ The name of a person (can be real, fictional or otherwise)
 
 ## Programmatic Information
 
-- ID
+- Id
     type: [Id](id.md)
     desc: The unique identifier of the label.
     validation:
         - call the validation on the ID
+- Prefix
+    description: The name's prefixes
+    type: List [Prefix](../affix/prefix.md)
+    optional: true
+    validation:
+        - if present, at least 1 element
+        - call the validation on each Prefix
 - First
     description: The first names
     type: List strings
@@ -32,6 +39,14 @@ The name of a person (can be real, fictional or otherwise)
     validation:
         - if present, at least 1 element
         - each string length >= 1 and <= 30 
+- Suffix
+    description: The name's suffixes
+    type: List [Suffix](../affix/suffix.md)
+    optional: true
+    validation:
+        - if present, at least 1 element
+        - call the validation on each Suffix
+
 
 # Validation
 

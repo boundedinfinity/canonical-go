@@ -7,12 +7,15 @@ import (
 	"encoding/json"
 
 	"github.com/boundedinfinity/canonical-go/lang/go/id"
+	"github.com/boundedinfinity/canonical-go/lang/go/person/affix"
 	"github.com/boundedinfinity/canonical-go/lang/go/validation"
 	"github.com/boundedinfinity/go-commoner/errorer"
 	"github.com/boundedinfinity/go-commoner/functional/optioner"
 )
 
 var (
+	prefixValidation = validation.Slice[affix.Prefix]("prefix").Min(1)
+	suffixValidation = validation.Slice[affix.Suffix]("suffix").Min(1)
 	partValidation   = validation.String[string]("").Min(1).Max(30)
 	firstValidation  = validation.Slice[string]("first").Min(1).Each(partValidation)
 	middleValidation = validation.Slice[string]("middle").Min(1).Each(partValidation)
@@ -22,26 +25,34 @@ var (
 	ErrInvalid  = errorer.New("invalid name")
 	ErrId       = id.ErrInvalid
 	ErrRequired = errorer.New("at least one of first, middle, or last is required")
+	ErrPrefix   = errorer.New("prefix")
 	ErrFirst    = errorer.New("first")
 	ErrMiddle   = errorer.New("middle")
 	ErrLast     = errorer.New("last")
+	ErrSuffix   = errorer.New("suffix")
 
 	errIdFn       = errorer.Func(ErrInvalid, id.ErrInvalid)
 	errRequiredFn = errorer.Func(ErrInvalid, ErrRequired)
+	errPrefixFn   = errorer.Func(ErrInvalid, ErrPrefix)
 	errFirstFn    = errorer.Func(ErrInvalid, ErrFirst)
 	errMiddleFn   = errorer.Func(ErrInvalid, ErrMiddle)
 	errLastFn     = errorer.Func(ErrInvalid, ErrLast)
+	errSuffixFn   = errorer.Func(ErrInvalid, ErrSuffix)
 )
 
 // Name is the name of a person (real, fictional or otherwise).
 //
-// Each part is optional: a nil slice means not present. A present part
-// must contain at least one name.
+// Each part is optional: None means not present, and is omitted from JSON
+// (omitzero; omitempty does not omit structs such as optioner.Option).
+// A present part must contain at least one element. Prefix and Suffix hold
+// the full affix.Prefix and affix.Suffix records.
 type Name struct {
-	Id     id.ID                     `json:"id"`
-	First  optioner.Option[[]string] `json:"first,omitempty"`
-	Middle optioner.Option[[]string] `json:"middle,omitempty"`
-	Last   optioner.Option[[]string] `json:"last,omitempty"`
+	Id     id.ID                           `json:"id"`
+	Prefix optioner.Option[[]affix.Prefix] `json:"prefix,omitzero"`
+	First  optioner.Option[[]string]       `json:"first,omitzero"`
+	Middle optioner.Option[[]string]       `json:"middle,omitzero"`
+	Last   optioner.Option[[]string]       `json:"last,omitzero"`
+	Suffix optioner.Option[[]affix.Suffix] `json:"suffix,omitzero"`
 }
 
 // Validate checks every field and returns all failures joined together.
@@ -56,6 +67,18 @@ func (this Name) Validate() error {
 
 	if this.First.Empty() && this.Middle.Empty() && this.Last.Empty() {
 		errs = append(errs, errRequiredFn(""))
+	}
+
+	if this.Prefix.Defined() {
+		if err := prefixValidation.Validate(this.Prefix.Get()); err != nil {
+			errs = append(errs, errPrefixFn("%w", err))
+		}
+
+		for i, prefix := range this.Prefix.Get() {
+			if err := prefix.Validate(); err != nil {
+				errs = append(errs, errPrefixFn("[%d] %w", i, err))
+			}
+		}
 	}
 
 	if this.First.Defined() {
@@ -73,6 +96,18 @@ func (this Name) Validate() error {
 	if this.Last.Defined() {
 		if err := lastValidation.Validate(this.Last.Get()); err != nil {
 			errs = append(errs, errLastFn("%w", err))
+		}
+	}
+
+	if this.Suffix.Defined() {
+		if err := suffixValidation.Validate(this.Suffix.Get()); err != nil {
+			errs = append(errs, errSuffixFn("%w", err))
+		}
+
+		for i, suffix := range this.Suffix.Get() {
+			if err := suffix.Validate(); err != nil {
+				errs = append(errs, errSuffixFn("[%d] %w", i, err))
+			}
 		}
 	}
 
@@ -112,18 +147,20 @@ func (this *Name) UnmarshalJSON(data []byte) error {
 
 // New returns a validated Name with a new ID.
 // Pass nil for any part that is not present.
-func New(first, middle, last []string) (Name, error) {
-	return Create(id.New(), first, middle, last)
+func New(prefix []affix.Prefix, first, middle, last []string, suffix []affix.Suffix) (Name, error) {
+	return Create(id.New(), prefix, first, middle, last, suffix)
 }
 
 // Create returns a validated Name with the given  ID.
 // Pass nil for any part that is not present.
-func Create(id id.ID, first, middle, last []string) (Name, error) {
+func Create(id id.ID, prefix []affix.Prefix, first, middle, last []string, suffix []affix.Suffix) (Name, error) {
 	name := Name{
 		Id:     id,
+		Prefix: optioner.OfSlice(prefix),
 		First:  optioner.OfSlice(first),
 		Middle: optioner.OfSlice(middle),
 		Last:   optioner.OfSlice(last),
+		Suffix: optioner.OfSlice(suffix),
 	}
 
 	if err := name.Validate(); err != nil {
@@ -134,8 +171,8 @@ func Create(id id.ID, first, middle, last []string) (Name, error) {
 }
 
 // MustNew is like New but panics if the Name is invalid.
-func MustNew(first, middle, last []string) Name {
-	name, err := New(first, middle, last)
+func MustNew(prefix []affix.Prefix, first, middle, last []string, suffix []affix.Suffix) Name {
+	name, err := New(prefix, first, middle, last, suffix)
 
 	if err != nil {
 		panic(err)
@@ -144,8 +181,8 @@ func MustNew(first, middle, last []string) Name {
 	return name
 }
 
-func MustCreate(id id.ID, first, middle, last []string) Name {
-	name, err := Create(id, first, middle, last)
+func MustCreate(id id.ID, prefix []affix.Prefix, first, middle, last []string, suffix []affix.Suffix) Name {
+	name, err := Create(id, prefix, first, middle, last, suffix)
 
 	if err != nil {
 		panic(err)

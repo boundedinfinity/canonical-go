@@ -92,12 +92,12 @@ func (this *sliceValidator[T]) Max(t int) *sliceValidator[T] {
 }
 
 // Each runs the element validator on every element, reporting failures by index.
-func (this *sliceValidator[T]) Each(elem Validator) *sliceValidator[T] {
+func (this *sliceValidator[T]) Each(validator Validator) *sliceValidator[T] {
 	validation := func(v []T) error {
 		var errs []error
 
 		for i, e := range v {
-			if err := elem.Validate(e); err != nil {
+			if err := validator.Validate(e); err != nil {
 				errs = append(errs, fmt.Errorf("[%d] %w", i, err))
 			}
 		}
