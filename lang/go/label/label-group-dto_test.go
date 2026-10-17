@@ -33,7 +33,7 @@ func Test_LabelGroupDto_ToModel(t *testing.T) {
 	dob := label.MustNew("Date of Birth", []string{"DOB"}, "")
 	badLabel := label.Label{Id: id.New()}
 
-	labels := resolver.Func[label.Label](func(i id.ID) (label.Label, error) {
+	labels := resolver.Func[id.ID, label.Label](func(i id.ID) (label.Label, error) {
 		switch i {
 		case dob.Id:
 			return dob, nil
@@ -50,7 +50,7 @@ func Test_LabelGroupDto_ToModel(t *testing.T) {
 	tcs := []struct {
 		name     string
 		input    label.LabelGroupDto
-		labels   resolver.Resolver[label.Label]
+		labels   resolver.Resolver[id.ID, label.Label]
 		expected label.LabelGroup
 		errs     []error
 	}{

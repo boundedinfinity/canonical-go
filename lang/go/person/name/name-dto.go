@@ -124,8 +124,8 @@ func (this *NameDto) UnmarshalJSON(data []byte) error {
 // A resolver is only called when its field is present, so it may be nil
 // otherwise.
 func (this NameDto) ToModel(
-	prefixes resolver.Resolver[affix.Prefix],
-	suffixes resolver.Resolver[affix.Suffix],
+	prefixes resolver.Resolver[id.ID, affix.Prefix],
+	suffixes resolver.Resolver[id.ID, affix.Suffix],
 ) (Name, error) {
 	if err := this.Validate(); err != nil {
 		return Name{}, err

@@ -15,6 +15,8 @@ CREATE TABLE users (
 );
 ```
 
+For a model with a [Natural Key](natural-key.md), the `id` column holds the natural key's value instead of a generated ID.
+
 We want to use the internal rowid for use in INSERTs, JOINs, etc.. and use the ID field for external clients.
 
 Queries should be writting to select on the `id` and use the rowid for any require JOINs, or other non-specificed sorting queries. This file will be the string serialized view of the [ID](../id/id.md) filed from all **Top Level  Models** models. 

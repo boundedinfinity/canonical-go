@@ -101,7 +101,7 @@ func (this *LabelGroupDto) UnmarshalJSON(data []byte) error {
 // Every resolution failure is reported and wraps resolver.ErrResolve.
 // The resolver is only called when Labels is present, so it may be nil
 // otherwise.
-func (this LabelGroupDto) ToModel(labels resolver.Resolver[Label]) (LabelGroup, error) {
+func (this LabelGroupDto) ToModel(labels resolver.Resolver[id.ID, Label]) (LabelGroup, error) {
 	if err := this.Validate(); err != nil {
 		return LabelGroup{}, err
 	}

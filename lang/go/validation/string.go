@@ -3,6 +3,8 @@ package validation
 import (
 	"errors"
 	"fmt"
+	"net/url"
+	"regexp"
 	"slices"
 	"strings"
 	"unicode/utf8"
@@ -103,6 +105,46 @@ func (this *stringValidator[T]) NoneOf(ts ...string) *stringValidator[T] {
 
 		if slices.Contains(ts, s) {
 			return fmt.Errorf("%s is one of %s", s, strings.Join(ts, ", "))
+		}
+
+		return nil
+	}
+
+	return this.Add(validation)
+}
+
+// Match requires the string to match re. Anchor the pattern with ^ and $ to
+// require a whole-string match.
+func (this *stringValidator[T]) Match(re *regexp.Regexp) *stringValidator[T] {
+	validation := func(v T) error {
+		s := string(v)
+
+		if !re.MatchString(s) {
+			return fmt.Errorf("%q does not match %s", s, re)
+		}
+
+		return nil
+	}
+
+	return this.Add(validation)
+}
+
+// URL requires an absolute URL with a host and one of the given schemes.
+func (this *stringValidator[T]) URL(schemes ...string) *stringValidator[T] {
+	validation := func(v T) error {
+		s := string(v)
+		u, err := url.Parse(s)
+
+		if err != nil {
+			return fmt.Errorf("%q is not a URL: %w", s, err)
+		}
+
+		if !u.IsAbs() || u.Host == "" {
+			return fmt.Errorf("%q is not an absolute URL", s)
+		}
+
+		if !slices.Contains(schemes, u.Scheme) {
+			return fmt.Errorf("%q scheme is not one of %s", s, strings.Join(schemes, ", "))
 		}
 
 		return nil

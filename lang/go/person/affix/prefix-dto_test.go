@@ -27,7 +27,7 @@ func Test_PrefixDto_ToModel(t *testing.T) {
 	invalidCategory := affix.PrefixCategory{Id: id.New(), Name: ""}
 	errNotFound := errors.New("not found")
 
-	categories := resolver.Func[affix.PrefixCategory](func(i id.ID) (affix.PrefixCategory, error) {
+	categories := resolver.Func[id.ID, affix.PrefixCategory](func(i id.ID) (affix.PrefixCategory, error) {
 		switch i {
 		case category.Id:
 			return category, nil
@@ -43,7 +43,7 @@ func Test_PrefixDto_ToModel(t *testing.T) {
 	tcs := []struct {
 		name       string
 		input      affix.PrefixDto
-		categories resolver.Resolver[affix.PrefixCategory]
+		categories resolver.Resolver[id.ID, affix.PrefixCategory]
 		expected   affix.Prefix
 		errs       []error
 	}{

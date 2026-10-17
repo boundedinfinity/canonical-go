@@ -1,0 +1,5 @@
+- [NIEMOPEN Github](https://niem.github.io/)
+    - NOTE: This site seems to be out of date
+- [OASIS OPEN](https://www.oasis-open.org/)
+    - NOTE: This seems to success the above site 
+    - [ISO 3166](https://docs.oasis-open.org/niemopen/niem-model/v6.0/ps01/xsd/codes/iso_3166.xsd)

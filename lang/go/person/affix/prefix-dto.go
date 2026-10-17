@@ -64,7 +64,7 @@ func (this *PrefixDto) UnmarshalJSON(data []byte) error {
 
 // ToModel resolves Category and returns the validated Prefix.
 // A resolution failure wraps resolver.ErrResolve.
-func (this PrefixDto) ToModel(categories resolver.Resolver[PrefixCategory]) (Prefix, error) {
+func (this PrefixDto) ToModel(categories resolver.Resolver[id.ID, PrefixCategory]) (Prefix, error) {
 	if err := this.Validate(); err != nil {
 		return Prefix{}, err
 	}

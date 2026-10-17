@@ -27,7 +27,7 @@ func Test_SuffixDto_ToModel(t *testing.T) {
 	invalidCategory := affix.SuffixCategory{Id: id.New(), Name: ""}
 	errNotFound := errors.New("not found")
 
-	categories := resolver.Func[affix.SuffixCategory](func(i id.ID) (affix.SuffixCategory, error) {
+	categories := resolver.Func[id.ID, affix.SuffixCategory](func(i id.ID) (affix.SuffixCategory, error) {
 		switch i {
 		case category.Id:
 			return category, nil
@@ -43,7 +43,7 @@ func Test_SuffixDto_ToModel(t *testing.T) {
 	tcs := []struct {
 		name       string
 		input      affix.SuffixDto
-		categories resolver.Resolver[affix.SuffixCategory]
+		categories resolver.Resolver[id.ID, affix.SuffixCategory]
 		expected   affix.Suffix
 		errs       []error
 	}{

@@ -64,7 +64,7 @@ func (this *SuffixDto) UnmarshalJSON(data []byte) error {
 
 // ToModel resolves Category and returns the validated Suffix.
 // A resolution failure wraps resolver.ErrResolve.
-func (this SuffixDto) ToModel(categories resolver.Resolver[SuffixCategory]) (Suffix, error) {
+func (this SuffixDto) ToModel(categories resolver.Resolver[id.ID, SuffixCategory]) (Suffix, error) {
 	if err := this.Validate(); err != nil {
 		return Suffix{}, err
 	}

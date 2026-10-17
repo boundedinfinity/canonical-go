@@ -1,0 +1,1994 @@
+[
+    {
+        "alpha-2": "AD",
+        "alpha-3": "AND",
+        "numeric": "020",
+        "name": "Andorra",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Andorra"
+    },
+    {
+        "alpha-2": "AE",
+        "alpha-3": "ARE",
+        "numeric": "784",
+        "name": "United Arab Emirates",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/United_Arab_Emirates"
+    },
+    {
+        "alpha-2": "AF",
+        "alpha-3": "AFG",
+        "numeric": "004",
+        "name": "Afghanistan",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Afghanistan"
+    },
+    {
+        "alpha-2": "AG",
+        "alpha-3": "ATG",
+        "numeric": "028",
+        "name": "Antigua and Barbuda",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Antigua_and_Barbuda"
+    },
+    {
+        "alpha-2": "AI",
+        "alpha-3": "AIA",
+        "numeric": "660",
+        "name": "Anguilla",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Anguilla"
+    },
+    {
+        "alpha-2": "AL",
+        "alpha-3": "ALB",
+        "numeric": "008",
+        "name": "Albania",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Albania"
+    },
+    {
+        "alpha-2": "AM",
+        "alpha-3": "ARM",
+        "numeric": "051",
+        "name": "Armenia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Armenia"
+    },
+    {
+        "alpha-2": "AO",
+        "alpha-3": "AGO",
+        "numeric": "024",
+        "name": "Angola",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Angola"
+    },
+    {
+        "alpha-2": "AQ",
+        "alpha-3": "ATA",
+        "numeric": "010",
+        "name": "Antarctica",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Antarctica"
+    },
+    {
+        "alpha-2": "AR",
+        "alpha-3": "ARG",
+        "numeric": "032",
+        "name": "Argentina",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Argentina"
+    },
+    {
+        "alpha-2": "AS",
+        "alpha-3": "ASM",
+        "numeric": "016",
+        "name": "American Samoa",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/American_Samoa"
+    },
+    {
+        "alpha-2": "AT",
+        "alpha-3": "AUT",
+        "numeric": "040",
+        "name": "Austria",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Austria"
+    },
+    {
+        "alpha-2": "AU",
+        "alpha-3": "AUS",
+        "numeric": "036",
+        "name": "Australia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Australia"
+    },
+    {
+        "alpha-2": "AW",
+        "alpha-3": "ABW",
+        "numeric": "533",
+        "name": "Aruba",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Aruba"
+    },
+    {
+        "alpha-2": "AX",
+        "alpha-3": "ALA",
+        "numeric": "248",
+        "name": "Aland Islands",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Aland_Islands"
+    },
+    {
+        "alpha-2": "AZ",
+        "alpha-3": "AZE",
+        "numeric": "031",
+        "name": "Azerbaijan",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Azerbaijan"
+    },
+    {
+        "alpha-2": "BA",
+        "alpha-3": "BIH",
+        "numeric": "070",
+        "name": "Bosnia and Herzegovina",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina"
+    },
+    {
+        "alpha-2": "BB",
+        "alpha-3": "BRB",
+        "numeric": "052",
+        "name": "Barbados",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Barbados"
+    },
+    {
+        "alpha-2": "BD",
+        "alpha-3": "BGD",
+        "numeric": "050",
+        "name": "Bangladesh",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Bangladesh"
+    },
+    {
+        "alpha-2": "BE",
+        "alpha-3": "BEL",
+        "numeric": "056",
+        "name": "Belgium",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Belgium"
+    },
+    {
+        "alpha-2": "BF",
+        "alpha-3": "BFA",
+        "numeric": "854",
+        "name": "Burkina Faso",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Burkina_Faso"
+    },
+    {
+        "alpha-2": "BG",
+        "alpha-3": "BGR",
+        "numeric": "100",
+        "name": "Bulgaria",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Bulgaria"
+    },
+    {
+        "alpha-2": "BH",
+        "alpha-3": "BHR",
+        "numeric": "048",
+        "name": "Bahrain",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Bahrain"
+    },
+    {
+        "alpha-2": "BI",
+        "alpha-3": "BDI",
+        "numeric": "108",
+        "name": "Burundi",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Burundi"
+    },
+    {
+        "alpha-2": "BJ",
+        "alpha-3": "BEN",
+        "numeric": "204",
+        "name": "Benin",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Benin"
+    },
+    {
+        "alpha-2": "BL",
+        "alpha-3": "BLM",
+        "numeric": "652",
+        "name": "Saint Barthélemy",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Saint_Barth%C3%A9lemy"
+    },
+    {
+        "alpha-2": "BM",
+        "alpha-3": "BMU",
+        "numeric": "060",
+        "name": "Bermuda",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Bermuda"
+    },
+    {
+        "alpha-2": "BN",
+        "alpha-3": "BRN",
+        "numeric": "096",
+        "name": "Brunei Darussalam",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Brunei_Darussalam"
+    },
+    {
+        "alpha-2": "BO",
+        "alpha-3": "BOL",
+        "numeric": "068",
+        "name": "Bolivia, Plurinational State of",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Bolivia"
+    },
+    {
+        "alpha-2": "BQ",
+        "alpha-3": "BES",
+        "numeric": "535",
+        "name": "Bonaire, Sint Eustatius and Saba",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Caribbean_Netherlands"
+    },
+    {
+        "alpha-2": "BR",
+        "alpha-3": "BRA",
+        "numeric": "076",
+        "name": "Brazil",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Brazil"
+    },
+    {
+        "alpha-2": "BS",
+        "alpha-3": "BHS",
+        "numeric": "044",
+        "name": "Bahamas",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Bahamas"
+    },
+    {
+        "alpha-2": "BT",
+        "alpha-3": "BTN",
+        "numeric": "064",
+        "name": "Bhutan",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Bhutan"
+    },
+    {
+        "alpha-2": "BV",
+        "alpha-3": "BVT",
+        "numeric": "074",
+        "name": "Bouvet Island",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Bouvet_Island"
+    },
+    {
+        "alpha-2": "BW",
+        "alpha-3": "BWA",
+        "numeric": "072",
+        "name": "Botswana",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Botswana"
+    },
+    {
+        "alpha-2": "BY",
+        "alpha-3": "BLR",
+        "numeric": "112",
+        "name": "Belarus",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Belarus"
+    },
+    {
+        "alpha-2": "BZ",
+        "alpha-3": "BLZ",
+        "numeric": "084",
+        "name": "Belize",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Belize"
+    },
+    {
+        "alpha-2": "CA",
+        "alpha-3": "CAN",
+        "numeric": "124",
+        "name": "Canada",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Canada"
+    },
+    {
+        "alpha-2": "CC",
+        "alpha-3": "CCK",
+        "numeric": "166",
+        "name": "Cocos (Keeling) Islands",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Cocos_(Keeling)_Islands"
+    },
+    {
+        "alpha-2": "CD",
+        "alpha-3": "COD",
+        "numeric": "180",
+        "name": "Congo, Democratic Republic of the",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Democratic_Republic_of_the_Congo"
+    },
+    {
+        "alpha-2": "CF",
+        "alpha-3": "CAF",
+        "numeric": "140",
+        "name": "Central African Republic",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Central_African_Republic"
+    },
+    {
+        "alpha-2": "CG",
+        "alpha-3": "COG",
+        "numeric": "178",
+        "name": "Congo",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Republic_of_the_Congo"
+    },
+    {
+        "alpha-2": "CH",
+        "alpha-3": "CHE",
+        "numeric": "756",
+        "name": "Switzerland",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Switzerland"
+    },
+    {
+        "alpha-2": "CI",
+        "alpha-3": "CIV",
+        "numeric": "384",
+        "name": "Cote d'Ivoire",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Ivory_Coast"
+    },
+    {
+        "alpha-2": "CK",
+        "alpha-3": "COK",
+        "numeric": "184",
+        "name": "Cook Islands",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Cook_Islands"
+    },
+    {
+        "alpha-2": "CL",
+        "alpha-3": "CHL",
+        "numeric": "152",
+        "name": "Chile",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Chile"
+    },
+    {
+        "alpha-2": "CM",
+        "alpha-3": "CMR",
+        "numeric": "120",
+        "name": "Cameroon",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Cameroon"
+    },
+    {
+        "alpha-2": "CN",
+        "alpha-3": "CHN",
+        "numeric": "156",
+        "name": "China",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/China"
+    },
+    {
+        "alpha-2": "CO",
+        "alpha-3": "COL",
+        "numeric": "170",
+        "name": "Colombia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Colombia"
+    },
+    {
+        "alpha-2": "CR",
+        "alpha-3": "CRI",
+        "numeric": "188",
+        "name": "Costa Rica",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Costa_Rica"
+    },
+    {
+        "alpha-2": "CU",
+        "alpha-3": "CUB",
+        "numeric": "192",
+        "name": "Cuba",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Cuba"
+    },
+    {
+        "alpha-2": "CV",
+        "alpha-3": "CPV",
+        "numeric": "132",
+        "name": "Cabo Verde",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Cabo_Verde"
+    },
+    {
+        "alpha-2": "CW",
+        "alpha-3": "CUW",
+        "numeric": "531",
+        "name": "Curaçao",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Cura%C3%A7ao"
+    },
+    {
+        "alpha-2": "CX",
+        "alpha-3": "CXR",
+        "numeric": "162",
+        "name": "Christmas Island",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Christmas_Island"
+    },
+    {
+        "alpha-2": "CY",
+        "alpha-3": "CYP",
+        "numeric": "196",
+        "name": "Cyprus",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Cyprus"
+    },
+    {
+        "alpha-2": "CZ",
+        "alpha-3": "CZE",
+        "numeric": "203",
+        "name": "Czechia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Czech_Republic"
+    },
+    {
+        "alpha-2": "DE",
+        "alpha-3": "DEU",
+        "numeric": "276",
+        "name": "Germany",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Germany"
+    },
+    {
+        "alpha-2": "DJ",
+        "alpha-3": "DJI",
+        "numeric": "262",
+        "name": "Djibouti",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Djibouti"
+    },
+    {
+        "alpha-2": "DK",
+        "alpha-3": "DNK",
+        "numeric": "208",
+        "name": "Denmark",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Denmark"
+    },
+    {
+        "alpha-2": "DM",
+        "alpha-3": "DMA",
+        "numeric": "212",
+        "name": "Dominica",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Dominica"
+    },
+    {
+        "alpha-2": "DO",
+        "alpha-3": "DOM",
+        "numeric": "214",
+        "name": "Dominican Republic",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Dominican_Republic"
+    },
+    {
+        "alpha-2": "DZ",
+        "alpha-3": "DZA",
+        "numeric": "012",
+        "name": "Algeria",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Algeria"
+    },
+    {
+        "alpha-2": "EC",
+        "alpha-3": "ECU",
+        "numeric": "218",
+        "name": "Ecuador",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Ecuador"
+    },
+    {
+        "alpha-2": "EE",
+        "alpha-3": "EST",
+        "numeric": "233",
+        "name": "Estonia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Estonia"
+    },
+    {
+        "alpha-2": "EG",
+        "alpha-3": "EGY",
+        "numeric": "818",
+        "name": "Egypt",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Egypt"
+    },
+    {
+        "alpha-2": "EH",
+        "alpha-3": "ESH",
+        "numeric": "732",
+        "name": "Western Sahara",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Western_Sahara"
+    },
+    {
+        "alpha-2": "ER",
+        "alpha-3": "ERI",
+        "numeric": "232",
+        "name": "Eritrea",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Eritrea"
+    },
+    {
+        "alpha-2": "ES",
+        "alpha-3": "ESP",
+        "numeric": "724",
+        "name": "Spain",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Spain"
+    },
+    {
+        "alpha-2": "ET",
+        "alpha-3": "ETH",
+        "numeric": "231",
+        "name": "Ethiopia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Ethiopia"
+    },
+    {
+        "alpha-2": "FI",
+        "alpha-3": "FIN",
+        "numeric": "246",
+        "name": "Finland",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Finland"
+    },
+    {
+        "alpha-2": "FJ",
+        "alpha-3": "FJI",
+        "numeric": "242",
+        "name": "Fiji",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Fiji"
+    },
+    {
+        "alpha-2": "FK",
+        "alpha-3": "FLK",
+        "numeric": "238",
+        "name": "Falkland Islands (Malvinas)",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Falkland_Islands"
+    },
+    {
+        "alpha-2": "FM",
+        "alpha-3": "FSM",
+        "numeric": "583",
+        "name": "Micronesia, Federated States of",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Federated_States_of_Micronesia"
+    },
+    {
+        "alpha-2": "FO",
+        "alpha-3": "FRO",
+        "numeric": "234",
+        "name": "Faroe Islands",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Faroe_Islands"
+    },
+    {
+        "alpha-2": "FR",
+        "alpha-3": "FRA",
+        "numeric": "250",
+        "name": "France",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/France"
+    },
+    {
+        "alpha-2": "GA",
+        "alpha-3": "GAB",
+        "numeric": "266",
+        "name": "Gabon",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Gabon"
+    },
+    {
+        "alpha-2": "GB",
+        "alpha-3": "GBR",
+        "numeric": "826",
+        "name": "United Kingdom of Great Britain and Northern Ireland",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/United_Kingdom"
+    },
+    {
+        "alpha-2": "GD",
+        "alpha-3": "GRD",
+        "numeric": "308",
+        "name": "Grenada",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Grenada"
+    },
+    {
+        "alpha-2": "GE",
+        "alpha-3": "GEO",
+        "numeric": "268",
+        "name": "Georgia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Georgia_(country)"
+    },
+    {
+        "alpha-2": "GF",
+        "alpha-3": "GUF",
+        "numeric": "254",
+        "name": "French Guiana",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/French_Guiana"
+    },
+    {
+        "alpha-2": "GG",
+        "alpha-3": "GGY",
+        "numeric": "831",
+        "name": "Guernsey",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Bailiwick_of_Guernsey"
+    },
+    {
+        "alpha-2": "GH",
+        "alpha-3": "GHA",
+        "numeric": "288",
+        "name": "Ghana",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Ghana"
+    },
+    {
+        "alpha-2": "GI",
+        "alpha-3": "GIB",
+        "numeric": "292",
+        "name": "Gibraltar",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Gibraltar"
+    },
+    {
+        "alpha-2": "GL",
+        "alpha-3": "GRL",
+        "numeric": "304",
+        "name": "Greenland",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Greenland"
+    },
+    {
+        "alpha-2": "GM",
+        "alpha-3": "GMB",
+        "numeric": "270",
+        "name": "Gambia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Gambia"
+    },
+    {
+        "alpha-2": "GN",
+        "alpha-3": "GIN",
+        "numeric": "324",
+        "name": "Guinea",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Guinea"
+    },
+    {
+        "alpha-2": "GP",
+        "alpha-3": "GLP",
+        "numeric": "312",
+        "name": "Guadeloupe",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Guadeloupe"
+    },
+    {
+        "alpha-2": "GQ",
+        "alpha-3": "GNQ",
+        "numeric": "226",
+        "name": "Equatorial Guinea",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Equatorial_Guinea"
+    },
+    {
+        "alpha-2": "GR",
+        "alpha-3": "GRC",
+        "numeric": "300",
+        "name": "Greece",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Greece"
+    },
+    {
+        "alpha-2": "GS",
+        "alpha-3": "SGS",
+        "numeric": "239",
+        "name": "South Georgia and the South Sandwich Islands",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/South_Georgia_and_the_South_Sandwich_Islands"
+    },
+    {
+        "alpha-2": "GT",
+        "alpha-3": "GTM",
+        "numeric": "320",
+        "name": "Guatemala",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Guatemala"
+    },
+    {
+        "alpha-2": "GU",
+        "alpha-3": "GUM",
+        "numeric": "316",
+        "name": "Guam",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Guam"
+    },
+    {
+        "alpha-2": "GW",
+        "alpha-3": "GNB",
+        "numeric": "624",
+        "name": "Guinea-Bissau",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Guinea-Bissau"
+    },
+    {
+        "alpha-2": "GY",
+        "alpha-3": "GUY",
+        "numeric": "328",
+        "name": "Guyana",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Guyana"
+    },
+    {
+        "alpha-2": "HK",
+        "alpha-3": "HKG",
+        "numeric": "344",
+        "name": "Hong Kong",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Hong_Kong"
+    },
+    {
+        "alpha-2": "HM",
+        "alpha-3": "HMD",
+        "numeric": "334",
+        "name": "Heard Island and McDonald Islands",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Heard_Island_and_McDonald_Islands"
+    },
+    {
+        "alpha-2": "HN",
+        "alpha-3": "HND",
+        "numeric": "340",
+        "name": "Honduras",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Honduras"
+    },
+    {
+        "alpha-2": "HR",
+        "alpha-3": "HRV",
+        "numeric": "191",
+        "name": "Croatia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Croatia"
+    },
+    {
+        "alpha-2": "HT",
+        "alpha-3": "HTI",
+        "numeric": "332",
+        "name": "Haiti",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Haiti"
+    },
+    {
+        "alpha-2": "HU",
+        "alpha-3": "HUN",
+        "numeric": "348",
+        "name": "Hungary",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Hungary"
+    },
+    {
+        "alpha-2": "ID",
+        "alpha-3": "IDN",
+        "numeric": "360",
+        "name": "Indonesia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Indonesia"
+    },
+    {
+        "alpha-2": "IE",
+        "alpha-3": "IRL",
+        "numeric": "372",
+        "name": "Ireland",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Republic_of_Ireland"
+    },
+    {
+        "alpha-2": "IL",
+        "alpha-3": "ISR",
+        "numeric": "376",
+        "name": "Israel",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Israel"
+    },
+    {
+        "alpha-2": "IM",
+        "alpha-3": "IMN",
+        "numeric": "833",
+        "name": "Isle of Man",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Isle_of_Man"
+    },
+    {
+        "alpha-2": "IN",
+        "alpha-3": "IND",
+        "numeric": "356",
+        "name": "India",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/India"
+    },
+    {
+        "alpha-2": "IO",
+        "alpha-3": "IOT",
+        "numeric": "086",
+        "name": "British Indian Ocean Territory",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/British_Indian_Ocean_Territory"
+    },
+    {
+        "alpha-2": "IQ",
+        "alpha-3": "IRQ",
+        "numeric": "368",
+        "name": "Iraq",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Iraq"
+    },
+    {
+        "alpha-2": "IR",
+        "alpha-3": "IRN",
+        "numeric": "364",
+        "name": "Iran, Islamic Republic of",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Iran"
+    },
+    {
+        "alpha-2": "IS",
+        "alpha-3": "ISL",
+        "numeric": "352",
+        "name": "Iceland",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Iceland"
+    },
+    {
+        "alpha-2": "IT",
+        "alpha-3": "ITA",
+        "numeric": "380",
+        "name": "Italy",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Italy"
+    },
+    {
+        "alpha-2": "JE",
+        "alpha-3": "JEY",
+        "numeric": "832",
+        "name": "Jersey",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Jersey"
+    },
+    {
+        "alpha-2": "JM",
+        "alpha-3": "JAM",
+        "numeric": "388",
+        "name": "Jamaica",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Jamaica"
+    },
+    {
+        "alpha-2": "JO",
+        "alpha-3": "JOR",
+        "numeric": "400",
+        "name": "Jordan",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Jordan"
+    },
+    {
+        "alpha-2": "JP",
+        "alpha-3": "JPN",
+        "numeric": "392",
+        "name": "Japan",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Japan"
+    },
+    {
+        "alpha-2": "KE",
+        "alpha-3": "KEN",
+        "numeric": "404",
+        "name": "Kenya",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Kenya"
+    },
+    {
+        "alpha-2": "KG",
+        "alpha-3": "KGZ",
+        "numeric": "417",
+        "name": "Kyrgyzstan",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Kyrgyzstan"
+    },
+    {
+        "alpha-2": "KH",
+        "alpha-3": "KHM",
+        "numeric": "116",
+        "name": "Cambodia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Cambodia"
+    },
+    {
+        "alpha-2": "KI",
+        "alpha-3": "KIR",
+        "numeric": "296",
+        "name": "Kiribati",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Kiribati"
+    },
+    {
+        "alpha-2": "KM",
+        "alpha-3": "COM",
+        "numeric": "174",
+        "name": "Comoros",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Comoros"
+    },
+    {
+        "alpha-2": "KN",
+        "alpha-3": "KNA",
+        "numeric": "659",
+        "name": "Saint Kitts and Nevis",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Saint_Kitts_and_Nevis"
+    },
+    {
+        "alpha-2": "KP",
+        "alpha-3": "PRK",
+        "numeric": "408",
+        "name": "Korea, Democratic People\u0026#39;s Republic of",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/North_Korea"
+    },
+    {
+        "alpha-2": "KR",
+        "alpha-3": "KOR",
+        "numeric": "410",
+        "name": "Korea, Republic of",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/South_Korea"
+    },
+    {
+        "alpha-2": "KW",
+        "alpha-3": "KWT",
+        "numeric": "414",
+        "name": "Kuwait",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Kuwait"
+    },
+    {
+        "alpha-2": "KY",
+        "alpha-3": "CYM",
+        "numeric": "136",
+        "name": "Cayman Islands",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Cayman_Islands"
+    },
+    {
+        "alpha-2": "KZ",
+        "alpha-3": "KAZ",
+        "numeric": "398",
+        "name": "Kazakhstan",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Kazakhstan"
+    },
+    {
+        "alpha-2": "LA",
+        "alpha-3": "LAO",
+        "numeric": "418",
+        "name": "Lao People\u0026#39;s Democratic Republic",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Laos"
+    },
+    {
+        "alpha-2": "LB",
+        "alpha-3": "LBN",
+        "numeric": "422",
+        "name": "Lebanon",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Lebanon"
+    },
+    {
+        "alpha-2": "LC",
+        "alpha-3": "LCA",
+        "numeric": "662",
+        "name": "Saint Lucia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Saint_Lucia"
+    },
+    {
+        "alpha-2": "LI",
+        "alpha-3": "LIE",
+        "numeric": "438",
+        "name": "Liechtenstein",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Liechtenstein"
+    },
+    {
+        "alpha-2": "LK",
+        "alpha-3": "LKA",
+        "numeric": "144",
+        "name": "Sri Lanka",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Sri_Lanka"
+    },
+    {
+        "alpha-2": "LR",
+        "alpha-3": "LBR",
+        "numeric": "430",
+        "name": "Liberia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Liberia"
+    },
+    {
+        "alpha-2": "LS",
+        "alpha-3": "LSO",
+        "numeric": "426",
+        "name": "Lesotho",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Lesotho"
+    },
+    {
+        "alpha-2": "LT",
+        "alpha-3": "LTU",
+        "numeric": "440",
+        "name": "Lithuania",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Lithuania"
+    },
+    {
+        "alpha-2": "LU",
+        "alpha-3": "LUX",
+        "numeric": "442",
+        "name": "Luxembourg",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Luxembourg"
+    },
+    {
+        "alpha-2": "LV",
+        "alpha-3": "LVA",
+        "numeric": "428",
+        "name": "Latvia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Latvia"
+    },
+    {
+        "alpha-2": "LY",
+        "alpha-3": "LBY",
+        "numeric": "434",
+        "name": "Libya",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Libya"
+    },
+    {
+        "alpha-2": "MA",
+        "alpha-3": "MAR",
+        "numeric": "504",
+        "name": "Morocco",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Morocco"
+    },
+    {
+        "alpha-2": "MC",
+        "alpha-3": "MCO",
+        "numeric": "492",
+        "name": "Monaco",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Monaco"
+    },
+    {
+        "alpha-2": "MD",
+        "alpha-3": "MDA",
+        "numeric": "498",
+        "name": "Moldova, Republic of",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Moldova"
+    },
+    {
+        "alpha-2": "ME",
+        "alpha-3": "MNE",
+        "numeric": "499",
+        "name": "Montenegro",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Montenegro"
+    },
+    {
+        "alpha-2": "MF",
+        "alpha-3": "MAF",
+        "numeric": "663",
+        "name": "Saint Martin (French part)",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Collectivity_of_Saint_Martin"
+    },
+    {
+        "alpha-2": "MG",
+        "alpha-3": "MDG",
+        "numeric": "450",
+        "name": "Madagascar",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Madagascar"
+    },
+    {
+        "alpha-2": "MH",
+        "alpha-3": "MHL",
+        "numeric": "584",
+        "name": "Marshall Islands",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Marshall_Islands"
+    },
+    {
+        "alpha-2": "MK",
+        "alpha-3": "MKD",
+        "numeric": "807",
+        "name": "North Macedonia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/North_Macedonia"
+    },
+    {
+        "alpha-2": "ML",
+        "alpha-3": "MLI",
+        "numeric": "466",
+        "name": "Mali",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Mali"
+    },
+    {
+        "alpha-2": "MM",
+        "alpha-3": "MMR",
+        "numeric": "104",
+        "name": "Myanmar",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Myanmar"
+    },
+    {
+        "alpha-2": "MN",
+        "alpha-3": "MNG",
+        "numeric": "496",
+        "name": "Mongolia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Mongolia"
+    },
+    {
+        "alpha-2": "MO",
+        "alpha-3": "MAC",
+        "numeric": "446",
+        "name": "Macao",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Macau"
+    },
+    {
+        "alpha-2": "MP",
+        "alpha-3": "MNP",
+        "numeric": "580",
+        "name": "Northern Mariana Islands",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Northern_Mariana_Islands"
+    },
+    {
+        "alpha-2": "MQ",
+        "alpha-3": "MTQ",
+        "numeric": "474",
+        "name": "Martinique",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Martinique"
+    },
+    {
+        "alpha-2": "MR",
+        "alpha-3": "MRT",
+        "numeric": "478",
+        "name": "Mauritania",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Mauritania"
+    },
+    {
+        "alpha-2": "MS",
+        "alpha-3": "MSR",
+        "numeric": "500",
+        "name": "Montserrat",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Montserrat"
+    },
+    {
+        "alpha-2": "MT",
+        "alpha-3": "MLT",
+        "numeric": "470",
+        "name": "Malta",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Malta"
+    },
+    {
+        "alpha-2": "MU",
+        "alpha-3": "MUS",
+        "numeric": "480",
+        "name": "Mauritius",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Mauritius"
+    },
+    {
+        "alpha-2": "MV",
+        "alpha-3": "MDV",
+        "numeric": "462",
+        "name": "Maldives",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Maldives"
+    },
+    {
+        "alpha-2": "MW",
+        "alpha-3": "MWI",
+        "numeric": "454",
+        "name": "Malawi",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Malawi"
+    },
+    {
+        "alpha-2": "MX",
+        "alpha-3": "MEX",
+        "numeric": "484",
+        "name": "Mexico",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Mexico"
+    },
+    {
+        "alpha-2": "MY",
+        "alpha-3": "MYS",
+        "numeric": "458",
+        "name": "Malaysia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Malaysia"
+    },
+    {
+        "alpha-2": "MZ",
+        "alpha-3": "MOZ",
+        "numeric": "508",
+        "name": "Mozambique",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Mozambique"
+    },
+    {
+        "alpha-2": "NA",
+        "alpha-3": "NAM",
+        "numeric": "516",
+        "name": "Namibia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Namibia"
+    },
+    {
+        "alpha-2": "NC",
+        "alpha-3": "NCL",
+        "numeric": "540",
+        "name": "New Caledonia",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/New_Caledonia"
+    },
+    {
+        "alpha-2": "NE",
+        "alpha-3": "NER",
+        "numeric": "562",
+        "name": "Niger",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Niger"
+    },
+    {
+        "alpha-2": "NF",
+        "alpha-3": "NFK",
+        "numeric": "574",
+        "name": "Norfolk Island",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Norfolk_Island"
+    },
+    {
+        "alpha-2": "NG",
+        "alpha-3": "NGA",
+        "numeric": "566",
+        "name": "Nigeria",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Nigeria"
+    },
+    {
+        "alpha-2": "NI",
+        "alpha-3": "NIC",
+        "numeric": "558",
+        "name": "Nicaragua",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Nicaragua"
+    },
+    {
+        "alpha-2": "NL",
+        "alpha-3": "NLD",
+        "numeric": "528",
+        "name": "Netherlands, Kingdom of the",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Kingdom_of_the_Netherlands"
+    },
+    {
+        "alpha-2": "NO",
+        "alpha-3": "NOR",
+        "numeric": "578",
+        "name": "Norway",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Norway"
+    },
+    {
+        "alpha-2": "NP",
+        "alpha-3": "NPL",
+        "numeric": "524",
+        "name": "Nepal",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Nepal"
+    },
+    {
+        "alpha-2": "NR",
+        "alpha-3": "NRU",
+        "numeric": "520",
+        "name": "Nauru",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Nauru"
+    },
+    {
+        "alpha-2": "NU",
+        "alpha-3": "NIU",
+        "numeric": "570",
+        "name": "Niue",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Niue"
+    },
+    {
+        "alpha-2": "NZ",
+        "alpha-3": "NZL",
+        "numeric": "554",
+        "name": "New Zealand",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/New_Zealand"
+    },
+    {
+        "alpha-2": "OM",
+        "alpha-3": "OMN",
+        "numeric": "512",
+        "name": "Oman",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Oman"
+    },
+    {
+        "alpha-2": "PA",
+        "alpha-3": "PAN",
+        "numeric": "591",
+        "name": "Panama",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Panama"
+    },
+    {
+        "alpha-2": "PE",
+        "alpha-3": "PER",
+        "numeric": "604",
+        "name": "Peru",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Peru"
+    },
+    {
+        "alpha-2": "PF",
+        "alpha-3": "PYF",
+        "numeric": "258",
+        "name": "French Polynesia",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/French_Polynesia"
+    },
+    {
+        "alpha-2": "PG",
+        "alpha-3": "PNG",
+        "numeric": "598",
+        "name": "Papua New Guinea",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Papua_New_Guinea"
+    },
+    {
+        "alpha-2": "PH",
+        "alpha-3": "PHL",
+        "numeric": "608",
+        "name": "Philippines",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Philippines"
+    },
+    {
+        "alpha-2": "PK",
+        "alpha-3": "PAK",
+        "numeric": "586",
+        "name": "Pakistan",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Pakistan"
+    },
+    {
+        "alpha-2": "PL",
+        "alpha-3": "POL",
+        "numeric": "616",
+        "name": "Poland",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Poland"
+    },
+    {
+        "alpha-2": "PM",
+        "alpha-3": "SPM",
+        "numeric": "666",
+        "name": "Saint Pierre and Miquelon",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Saint_Pierre_and_Miquelon"
+    },
+    {
+        "alpha-2": "PN",
+        "alpha-3": "PCN",
+        "numeric": "612",
+        "name": "Pitcairn",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Pitcairn_Islands"
+    },
+    {
+        "alpha-2": "PR",
+        "alpha-3": "PRI",
+        "numeric": "630",
+        "name": "Puerto Rico",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Puerto_Rico"
+    },
+    {
+        "alpha-2": "PS",
+        "alpha-3": "PSE",
+        "numeric": "275",
+        "name": "Palestine, State of",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/State_of_Palestine"
+    },
+    {
+        "alpha-2": "PT",
+        "alpha-3": "PRT",
+        "numeric": "620",
+        "name": "Portugal",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Portugal"
+    },
+    {
+        "alpha-2": "PW",
+        "alpha-3": "PLW",
+        "numeric": "585",
+        "name": "Palau",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Palau"
+    },
+    {
+        "alpha-2": "PY",
+        "alpha-3": "PRY",
+        "numeric": "600",
+        "name": "Paraguay",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Paraguay"
+    },
+    {
+        "alpha-2": "QA",
+        "alpha-3": "QAT",
+        "numeric": "634",
+        "name": "Qatar",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Qatar"
+    },
+    {
+        "alpha-2": "RE",
+        "alpha-3": "REU",
+        "numeric": "638",
+        "name": "Réunion",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/R%C3%A9union"
+    },
+    {
+        "alpha-2": "RO",
+        "alpha-3": "ROU",
+        "numeric": "642",
+        "name": "Romania",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Romania"
+    },
+    {
+        "alpha-2": "RS",
+        "alpha-3": "SRB",
+        "numeric": "688",
+        "name": "Serbia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Serbia"
+    },
+    {
+        "alpha-2": "RU",
+        "alpha-3": "RUS",
+        "numeric": "643",
+        "name": "Russian Federation",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Russia"
+    },
+    {
+        "alpha-2": "RW",
+        "alpha-3": "RWA",
+        "numeric": "646",
+        "name": "Rwanda",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Rwanda"
+    },
+    {
+        "alpha-2": "SA",
+        "alpha-3": "SAU",
+        "numeric": "682",
+        "name": "Saudi Arabia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Saudi_Arabia"
+    },
+    {
+        "alpha-2": "SB",
+        "alpha-3": "SLB",
+        "numeric": "090",
+        "name": "Solomon Islands",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Solomon_Islands"
+    },
+    {
+        "alpha-2": "SC",
+        "alpha-3": "SYC",
+        "numeric": "690",
+        "name": "Seychelles",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Seychelles"
+    },
+    {
+        "alpha-2": "SD",
+        "alpha-3": "SDN",
+        "numeric": "729",
+        "name": "Sudan",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Sudan"
+    },
+    {
+        "alpha-2": "SE",
+        "alpha-3": "SWE",
+        "numeric": "752",
+        "name": "Sweden",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Sweden"
+    },
+    {
+        "alpha-2": "SG",
+        "alpha-3": "SGP",
+        "numeric": "702",
+        "name": "Singapore",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Singapore"
+    },
+    {
+        "alpha-2": "SH",
+        "alpha-3": "SHN",
+        "numeric": "654",
+        "name": "Saint Helena, Ascension and Tristan da Cunha",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Saint_Helena,_Ascension_and_Tristan_da_Cunha"
+    },
+    {
+        "alpha-2": "SI",
+        "alpha-3": "SVN",
+        "numeric": "705",
+        "name": "Slovenia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Slovenia"
+    },
+    {
+        "alpha-2": "SJ",
+        "alpha-3": "SJM",
+        "numeric": "744",
+        "name": "Svalbard and Jan Mayen",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Svalbard_and_Jan_Mayen"
+    },
+    {
+        "alpha-2": "SK",
+        "alpha-3": "SVK",
+        "numeric": "703",
+        "name": "Slovakia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Slovakia"
+    },
+    {
+        "alpha-2": "SL",
+        "alpha-3": "SLE",
+        "numeric": "694",
+        "name": "Sierra Leone",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Sierra_Leone"
+    },
+    {
+        "alpha-2": "SM",
+        "alpha-3": "SMR",
+        "numeric": "674",
+        "name": "San Marino",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/San_Marino"
+    },
+    {
+        "alpha-2": "SN",
+        "alpha-3": "SEN",
+        "numeric": "686",
+        "name": "Senegal",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Senegal"
+    },
+    {
+        "alpha-2": "SO",
+        "alpha-3": "SOM",
+        "numeric": "706",
+        "name": "Somalia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Somalia"
+    },
+    {
+        "alpha-2": "SR",
+        "alpha-3": "SUR",
+        "numeric": "740",
+        "name": "Suriname",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Suriname"
+    },
+    {
+        "alpha-2": "SS",
+        "alpha-3": "SSD",
+        "numeric": "728",
+        "name": "South Sudan",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/South_Sudan"
+    },
+    {
+        "alpha-2": "ST",
+        "alpha-3": "STP",
+        "numeric": "678",
+        "name": "Sao Tome and Principe",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe"
+    },
+    {
+        "alpha-2": "SV",
+        "alpha-3": "SLV",
+        "numeric": "222",
+        "name": "El Salvador",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/El_Salvador"
+    },
+    {
+        "alpha-2": "SX",
+        "alpha-3": "SXM",
+        "numeric": "534",
+        "name": "Sint Maarten (Dutch part)",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Sint_Maarten"
+    },
+    {
+        "alpha-2": "SY",
+        "alpha-3": "SYR",
+        "numeric": "760",
+        "name": "Syrian Arab Republic",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Syria"
+    },
+    {
+        "alpha-2": "SZ",
+        "alpha-3": "SWZ",
+        "numeric": "748",
+        "name": "Eswatini",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Eswatini"
+    },
+    {
+        "alpha-2": "TC",
+        "alpha-3": "TCA",
+        "numeric": "796",
+        "name": "Turks and Caicos Islands",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Turks_and_Caicos_Islands"
+    },
+    {
+        "alpha-2": "TD",
+        "alpha-3": "TCD",
+        "numeric": "148",
+        "name": "Chad",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Chad"
+    },
+    {
+        "alpha-2": "TF",
+        "alpha-3": "ATF",
+        "numeric": "260",
+        "name": "French Southern Territories",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/French_Southern_and_Antarctic_Lands"
+    },
+    {
+        "alpha-2": "TG",
+        "alpha-3": "TGO",
+        "numeric": "768",
+        "name": "Togo",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Togo"
+    },
+    {
+        "alpha-2": "TH",
+        "alpha-3": "THA",
+        "numeric": "764",
+        "name": "Thailand",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Thailand"
+    },
+    {
+        "alpha-2": "TJ",
+        "alpha-3": "TJK",
+        "numeric": "762",
+        "name": "Tajikistan",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Tajikistan"
+    },
+    {
+        "alpha-2": "TK",
+        "alpha-3": "TKL",
+        "numeric": "772",
+        "name": "Tokelau",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Tokelau"
+    },
+    {
+        "alpha-2": "TL",
+        "alpha-3": "TLS",
+        "numeric": "626",
+        "name": "Timor-Leste",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/East_Timor"
+    },
+    {
+        "alpha-2": "TM",
+        "alpha-3": "TKM",
+        "numeric": "795",
+        "name": "Turkmenistan",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Turkmenistan"
+    },
+    {
+        "alpha-2": "TN",
+        "alpha-3": "TUN",
+        "numeric": "788",
+        "name": "Tunisia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Tunisia"
+    },
+    {
+        "alpha-2": "TO",
+        "alpha-3": "TON",
+        "numeric": "776",
+        "name": "Tonga",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Tonga"
+    },
+    {
+        "alpha-2": "TR",
+        "alpha-3": "TUR",
+        "numeric": "792",
+        "name": "Türkiye",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Turkey"
+    },
+    {
+        "alpha-2": "TT",
+        "alpha-3": "TTO",
+        "numeric": "780",
+        "name": "Trinidad and Tobago",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Trinidad_and_Tobago"
+    },
+    {
+        "alpha-2": "TV",
+        "alpha-3": "TUV",
+        "numeric": "798",
+        "name": "Tuvalu",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Tuvalu"
+    },
+    {
+        "alpha-2": "TW",
+        "alpha-3": "TWN",
+        "numeric": "158",
+        "name": "Taiwan, Province of China",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Taiwan,_China"
+    },
+    {
+        "alpha-2": "TZ",
+        "alpha-3": "TZA",
+        "numeric": "834",
+        "name": "Tanzania, United Republic of",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Tanzania"
+    },
+    {
+        "alpha-2": "UA",
+        "alpha-3": "UKR",
+        "numeric": "804",
+        "name": "Ukraine",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Ukraine"
+    },
+    {
+        "alpha-2": "UG",
+        "alpha-3": "UGA",
+        "numeric": "800",
+        "name": "Uganda",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Uganda"
+    },
+    {
+        "alpha-2": "UM",
+        "alpha-3": "UMI",
+        "numeric": "581",
+        "name": "United States Minor Outlying Islands",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/United_States_Minor_Outlying_Islands"
+    },
+    {
+        "alpha-2": "US",
+        "alpha-3": "USA",
+        "numeric": "840",
+        "name": "United States of America",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/United_States"
+    },
+    {
+        "alpha-2": "UY",
+        "alpha-3": "URY",
+        "numeric": "858",
+        "name": "Uruguay",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Uruguay"
+    },
+    {
+        "alpha-2": "UZ",
+        "alpha-3": "UZB",
+        "numeric": "860",
+        "name": "Uzbekistan",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Uzbekistan"
+    },
+    {
+        "alpha-2": "VA",
+        "alpha-3": "VAT",
+        "numeric": "336",
+        "name": "Holy See",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Vatican_City"
+    },
+    {
+        "alpha-2": "VC",
+        "alpha-3": "VCT",
+        "numeric": "670",
+        "name": "Saint Vincent and the Grenadines",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Saint_Vincent_and_the_Grenadines"
+    },
+    {
+        "alpha-2": "VE",
+        "alpha-3": "VEN",
+        "numeric": "862",
+        "name": "Venezuela, Bolivarian Republic of",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Venezuela"
+    },
+    {
+        "alpha-2": "VG",
+        "alpha-3": "VGB",
+        "numeric": "092",
+        "name": "Virgin Islands (British)",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/British_Virgin_Islands"
+    },
+    {
+        "alpha-2": "VI",
+        "alpha-3": "VIR",
+        "numeric": "850",
+        "name": "Virgin Islands (U.S.)",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/United_States_Virgin_Islands"
+    },
+    {
+        "alpha-2": "VN",
+        "alpha-3": "VNM",
+        "numeric": "704",
+        "name": "Viet Nam",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Vietnam"
+    },
+    {
+        "alpha-2": "VU",
+        "alpha-3": "VUT",
+        "numeric": "548",
+        "name": "Vanuatu",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Vanuatu"
+    },
+    {
+        "alpha-2": "WF",
+        "alpha-3": "WLF",
+        "numeric": "876",
+        "name": "Wallis and Futuna",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Wallis_and_Futuna"
+    },
+    {
+        "alpha-2": "WS",
+        "alpha-3": "WSM",
+        "numeric": "882",
+        "name": "Samoa",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Samoa"
+    },
+    {
+        "alpha-2": "YE",
+        "alpha-3": "YEM",
+        "numeric": "887",
+        "name": "Yemen",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Yemen"
+    },
+    {
+        "alpha-2": "YT",
+        "alpha-3": "MYT",
+        "numeric": "175",
+        "name": "Mayotte",
+        "independent": false,
+        "reference": "https://en.wikipedia.org/wiki/Mayotte"
+    },
+    {
+        "alpha-2": "ZA",
+        "alpha-3": "ZAF",
+        "numeric": "710",
+        "name": "South Africa",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/South_Africa"
+    },
+    {
+        "alpha-2": "ZM",
+        "alpha-3": "ZMB",
+        "numeric": "894",
+        "name": "Zambia",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Zambia"
+    },
+    {
+        "alpha-2": "ZW",
+        "alpha-3": "ZWE",
+        "numeric": "716",
+        "name": "Zimbabwe",
+        "independent": true,
+        "reference": "https://en.wikipedia.org/wiki/Zimbabwe"
+    }
+]

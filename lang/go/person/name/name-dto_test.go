@@ -15,8 +15,8 @@ import (
 
 // lookup returns a Resolver over the given models, failing with errNotFound
 // for any other ID.
-func lookup[T any](errNotFound error, getId func(T) id.ID, models ...T) resolver.Resolver[T] {
-	return resolver.Func[T](func(i id.ID) (T, error) {
+func lookup[T any](errNotFound error, getId func(T) id.ID, models ...T) resolver.Resolver[id.ID, T] {
+	return resolver.Func[id.ID, T](func(i id.ID) (T, error) {
 		for _, m := range models {
 			if getId(m) == i {
 				return m, nil
@@ -66,8 +66,8 @@ func Test_NameDto_ToModel(t *testing.T) {
 	tcs := []struct {
 		name     string
 		input    name.NameDto
-		prefixes resolver.Resolver[affix.Prefix]
-		suffixes resolver.Resolver[affix.Suffix]
+		prefixes resolver.Resolver[id.ID, affix.Prefix]
+		suffixes resolver.Resolver[id.ID, affix.Suffix]
 		expected name.Name
 		errs     []error
 	}{

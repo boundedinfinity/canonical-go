@@ -14,7 +14,9 @@ The DTO is derived from the model's spec. Individual specs do not describe it.
 
 - **References become IDs.** A field whose type is a **Top Level Model** becomes
   an [Id](../id/id.md). The cardinality is kept: a single model becomes a single
-  ID, and a `List` of models becomes a `List` of IDs.
+  ID, and a `List` of models becomes a `List` of IDs. If the referenced model
+  has a [Natural Key](natural-key.md), the field holds that key's value instead
+  of an Id (e.g. a Country reference holds `"US"`).
 - **Other fields are unchanged.** Scalars, lists of scalars, and models that are
   *not* **Top Level Models** (e.g. [Affix](../person/affix/affix.md) or
   [Category](../person/affix/category.md), which are base types) are copied
@@ -85,6 +87,8 @@ category object.
   (`ErrInvalid`, `ErrPrefix`, etc.).
 - `Xxx.ToDto() XxxDto` converts a model to its DTO.
 - `XxxDto.ToModel(...) (Xxx, error)` converts back. It takes one
-  `resolver.Resolver[T]` (from `lang/go/resolver`) per referenced model type, in
-  field order. A DTO with no references has `ToModel()` with no arguments.
+  `resolver.Resolver[K, T]` (from `lang/go/resolver`) per referenced model type,
+  in field order, where `K` is the reference's key type: `id.ID`, or the
+  [Natural Key](natural-key.md)'s type (e.g. `string` for a Country). A DTO with
+  no references has `ToModel()` with no arguments.
 - Resolution failures wrap `resolver.ErrResolve` and the resolver's own error.

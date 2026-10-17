@@ -15,7 +15,7 @@ var (
 	known       = id.MustParse("b12e7628-35b0-4ae5-b2d9-0f34f4828229")
 	unknown     = id.MustParse("0b6f1c9e-2d4a-4f3b-9c8e-7a5d3e1f2b4c")
 
-	lookup = resolver.Func[string](func(i id.ID) (string, error) {
+	lookup = resolver.Func[id.ID, string](func(i id.ID) (string, error) {
 		if i == known {
 			return "found", nil
 		}
@@ -27,7 +27,7 @@ var (
 func Test_One(t *testing.T) {
 	tcs := []struct {
 		name     string
-		resolver resolver.Resolver[string]
+		resolver resolver.Resolver[id.ID, string]
 		id       id.ID
 		expected string
 		errs     []error
@@ -96,7 +96,7 @@ func Test_Option(t *testing.T) {
 	assert.NoError(t, err)
 	assert.Equal(t, optioner.Some("found"), actual)
 
-	actual, err = resolver.Option[string](nil, optioner.None[id.ID]())
+	actual, err = resolver.Option[id.ID, string](nil, optioner.None[id.ID]())
 	assert.NoError(t, err)
 	assert.Equal(t, optioner.None[string](), actual)
 
@@ -110,7 +110,7 @@ func Test_OptionAll(t *testing.T) {
 	assert.NoError(t, err)
 	assert.Equal(t, optioner.Some([]string{"found"}), actual)
 
-	actual, err = resolver.OptionAll[string](nil, optioner.None[[]id.ID]())
+	actual, err = resolver.OptionAll[id.ID, string](nil, optioner.None[[]id.ID]())
 	assert.NoError(t, err)
 	assert.Equal(t, optioner.None[[]string](), actual)
 
