@@ -1,11 +1,11 @@
-package datetime_test
+package time_test
 
 import (
 	"encoding/json"
 	"testing"
-	"time"
+	gotime "time"
 
-	"github.com/boundedinfinity/canonical-go/lang/go/datetime"
+	"github.com/boundedinfinity/canonical-go/lang/go/measurement/time"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -49,43 +49,43 @@ func Test_ParseTime(t *testing.T) {
 		{
 			name:  "empty",
 			input: "",
-			err:   datetime.ErrInvalidTime,
+			err:   time.ErrInvalidTime,
 		},
 		{
 			name:  "missing offset",
 			input: "14:30:00",
-			err:   datetime.ErrInvalidTime,
+			err:   time.ErrInvalidTime,
 		},
 		{
 			name:  "missing seconds",
 			input: "14:30Z",
-			err:   datetime.ErrInvalidTime,
+			err:   time.ErrInvalidTime,
 		},
 		{
 			name:  "out of range hour",
 			input: "24:00:00Z",
-			err:   datetime.ErrInvalidTime,
+			err:   time.ErrInvalidTime,
 		},
 		{
 			name:  "out of range minute",
 			input: "14:60:00Z",
-			err:   datetime.ErrInvalidTime,
+			err:   time.ErrInvalidTime,
 		},
 		{
 			name:  "with date",
 			input: "2026-11-07T14:30:00Z",
-			err:   datetime.ErrInvalidTime,
+			err:   time.ErrInvalidTime,
 		},
 		{
 			name:  "not a time",
 			input: "not-a-time",
-			err:   datetime.ErrInvalidTime,
+			err:   time.ErrInvalidTime,
 		},
 	}
 
 	for _, tc := range tcs {
 		t.Run(tc.name, func(tt *testing.T) {
-			actual, err := datetime.ParseTime(tc.input)
+			actual, err := time.ParseTime(tc.input)
 
 			if tc.err != nil {
 				assert.ErrorIs(tt, err, tc.err)
@@ -101,27 +101,27 @@ func Test_ParseTime(t *testing.T) {
 }
 
 func Test_NewTime(t *testing.T) {
-	loc := time.FixedZone("", -5*60*60)
+	loc := gotime.FixedZone("", -5*60*60)
 
-	actual := datetime.NewTime(time.Date(2026, 11, 7, 9, 30, 0, 0, loc))
+	actual := time.NewTime(gotime.Date(2026, 11, 7, 9, 30, 0, 0, loc))
 	assert.Equal(t, "09:30:00-05:00", actual.String())
 
 	year, month, day := actual.Time().Date()
 	assert.Equal(t, 1, year)
-	assert.Equal(t, time.January, month)
+	assert.Equal(t, gotime.January, month)
 	assert.Equal(t, 1, day)
 }
 
 func Test_CurrentTime(t *testing.T) {
-	assert.NoError(t, datetime.CurrentTime().Validate())
+	assert.NoError(t, time.CurrentTime().Validate())
 }
 
 func Test_ZeroTime(t *testing.T) {
-	assert.Equal(t, "00:00:00Z", datetime.ZeroTime.String())
-	assert.NoError(t, datetime.ZeroTime.Validate())
-	assert.Equal(t, datetime.ZeroTime, datetime.MustParseTime("00:00:00Z"))
-	assert.True(t, datetime.MustParseTime("00:00:00Z").IsZero())
-	assert.False(t, datetime.MustParseTime("00:00:01Z").IsZero())
+	assert.Equal(t, "00:00:00Z", time.ZeroTime.String())
+	assert.NoError(t, time.ZeroTime.Validate())
+	assert.Equal(t, time.ZeroTime, time.MustParseTime("00:00:00Z"))
+	assert.True(t, time.MustParseTime("00:00:00Z").IsZero())
+	assert.False(t, time.MustParseTime("00:00:01Z").IsZero())
 }
 
 func Test_Time_Equal(t *testing.T) {
@@ -140,7 +140,7 @@ func Test_Time_Equal(t *testing.T) {
 
 	for _, tc := range tcs {
 		t.Run(tc.name, func(tt *testing.T) {
-			a, b := datetime.MustParseTime(tc.a), datetime.MustParseTime(tc.b)
+			a, b := time.MustParseTime(tc.a), time.MustParseTime(tc.b)
 
 			assert.Equal(tt, tc.expected, a.Equal(b))
 			assert.Equal(tt, tc.expected, b.Equal(a), "symmetric")
@@ -150,10 +150,10 @@ func Test_Time_Equal(t *testing.T) {
 
 func Test_Time_JSON(t *testing.T) {
 	type wrapper struct {
-		At datetime.Time `json:"at"`
+		At time.Time `json:"at"`
 	}
 
-	expected := wrapper{At: datetime.MustParseTime("09:30:00.123-05:00")}
+	expected := wrapper{At: time.MustParseTime("09:30:00.123-05:00")}
 
 	data, err := json.Marshal(expected)
 	assert.NoError(t, err)
@@ -164,17 +164,17 @@ func Test_Time_JSON(t *testing.T) {
 	assert.True(t, expected.At.Equal(actual.At))
 	assert.Equal(t, expected.At.String(), actual.At.String())
 
-	assert.ErrorIs(t, json.Unmarshal([]byte(`{"at":"nope"}`), &actual), datetime.ErrInvalidTime)
+	assert.ErrorIs(t, json.Unmarshal([]byte(`{"at":"nope"}`), &actual), time.ErrInvalidTime)
 }
 
 func Test_Time_UnmarshalJSON(t *testing.T) {
-	valid := datetime.MustParseTime("14:30:00Z")
+	valid := time.MustParseTime("14:30:00Z")
 
 	tcs := []struct {
 		name     string
 		input    string
-		start    datetime.Time
-		expected datetime.Time
+		start    time.Time
+		expected time.Time
 		err      error
 	}{
 		{
@@ -191,17 +191,17 @@ func Test_Time_UnmarshalJSON(t *testing.T) {
 		{
 			name:  "invalid time string",
 			input: `"nope"`,
-			err:   datetime.ErrInvalidTime,
+			err:   time.ErrInvalidTime,
 		},
 		{
 			name:  "empty string",
 			input: `""`,
-			err:   datetime.ErrInvalidTime,
+			err:   time.ErrInvalidTime,
 		},
 		{
 			name:  "number",
 			input: `123`,
-			err:   datetime.ErrInvalidTime,
+			err:   time.ErrInvalidTime,
 		},
 	}
 
@@ -222,15 +222,15 @@ func Test_Time_UnmarshalJSON(t *testing.T) {
 }
 
 func Test_Time_Text(t *testing.T) {
-	m := map[datetime.Time]string{
-		datetime.MustParseTime("14:30:00Z"): "a",
+	m := map[time.Time]string{
+		time.MustParseTime("14:30:00Z"): "a",
 	}
 
 	data, err := json.Marshal(m)
 	assert.NoError(t, err)
 	assert.JSONEq(t, `{"14:30:00Z":"a"}`, string(data))
 
-	var actual map[datetime.Time]string
+	var actual map[time.Time]string
 	assert.NoError(t, json.Unmarshal(data, &actual))
 	assert.Len(t, actual, 1)
 

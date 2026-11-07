@@ -1,6 +1,6 @@
-package datetime
+package time
 
-// Source of truth: domain-model/datetime/time-range.md
+// Source of truth: domain-model/measurement/time/time-range.md
 
 import (
 	"encoding/json"

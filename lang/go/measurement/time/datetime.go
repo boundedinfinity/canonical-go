@@ -1,7 +1,8 @@
-// Package datetime implements the DateTime data type.
+// Package time implements the DateTime, Date, Time, and Duration data types
+// and their ranges.
 //
-// Source of truth: domain-model/datetime/datetime.md
-package datetime
+// Source of truth: domain-model/measurement/time/datetime.md
+package time
 
 import (
 	"encoding/json"
