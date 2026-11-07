@@ -16,45 +16,19 @@ var (
 
 func String[T ~string](name string) *stringValidator[T] {
 	return &stringValidator[T]{
-		name: name,
+		name:    name,
+		rootErr: StringValidationError,
 	}
 }
+
+var _ Validator = &stringValidator[string]{}
 
 type stringValidator[T ~string] struct {
-	name        string
-	validations []func(T) error
-}
-
-func (this stringValidator[T]) Validate(a any) error {
-	t, ok := a.(T)
-
-	if !ok {
-		var t T
-		panic(fmt.Errorf("%T is not of type %T", a, t))
-	}
-
-	var errs []error
-
-	for _, fn := range this.validations {
-		if err := fn(t); err != nil {
-			if this.name != "" {
-				err = fmt.Errorf("%s %w", this.name, err)
-			}
-			errs = append(errs, fmt.Errorf("%w : %w", StringValidationError, err))
-		}
-	}
-
-	return errors.Join(errs...)
-}
-
-func (this *stringValidator[T]) Name(v string) *stringValidator[T] {
-	this.name = v
-	return this
+	validator[T]
 }
 
 func (this *stringValidator[T]) Add(fn func(T) error) *stringValidator[T] {
-	this.validations = append(this.validations, fn)
-	return this
+	return this.add(this, fn)
 }
 
 func (this *stringValidator[T]) Min(t int) *stringValidator[T] {

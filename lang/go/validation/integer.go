@@ -11,41 +11,21 @@ var (
 	IntegerValidationError = errors.New("string validation")
 )
 
+func Integer[T ~int | ~int32 | ~int64](name string) *integerValidator[T] {
+	return &integerValidator[T]{
+		name:    name,
+		rootErr: IntegerValidationError,
+	}
+}
+
+var _ Validator = &integerValidator[int]{}
+
 type integerValidator[T ~int | ~int32 | ~int64] struct {
-	name        string
-	validations []func(T) error
-}
-
-func (this integerValidator[T]) Validate(a any) error {
-	var v T
-	var ok bool
-
-	if v, ok = a.(T); !ok {
-		panic(fmt.Errorf("%T is not of type %T", a, v))
-	}
-
-	var errs []error
-
-	for _, fn := range this.validations {
-		if err := fn(v); err != nil {
-			if this.name != "" {
-				err = fmt.Errorf("%s %w", this.name, err)
-			}
-			errs = append(errs, fmt.Errorf("%w : %w", IntegerValidationError, err))
-		}
-	}
-
-	return errors.Join(errs...)
-}
-
-func (this *integerValidator[T]) Name(v string) *integerValidator[T] {
-	this.name = v
-	return this
+	validator[T]
 }
 
 func (this *integerValidator[T]) Add(fn func(T) error) *integerValidator[T] {
-	this.validations = append(this.validations, fn)
-	return this
+	return this.add(this, fn)
 }
 
 func (this *integerValidator[T]) Min(t T) *integerValidator[T] {
