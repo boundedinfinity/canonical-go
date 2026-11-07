@@ -4,7 +4,7 @@ package affix
 // domain-model/global-notes/dto.md
 
 // PrefixCategoryDto is the data transfer object for PrefixCategory.
-// PrefixCategory holds no other Top Level Models, so PrefixCategoryDto has
+// PrefixCategory holds no other Entities, so PrefixCategoryDto has
 // the same fields, validation, and JSON encoding, all from the embedded
 // Category.
 type PrefixCategoryDto struct {

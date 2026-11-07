@@ -1,6 +1,6 @@
 # Label Group
 
-**Top Level Model**
+**Entity**
 
 A user defined group of [Labels](label.md).
 

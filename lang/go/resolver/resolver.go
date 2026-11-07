@@ -1,4 +1,4 @@
-// Package resolver looks up Top Level Models by key (an id.ID, or a natural
+// Package resolver looks up Entities by key (an id.ID, or a natural
 // key such as an ISO country code) when a DTO is converted back to its model.
 //
 // Source of truth: domain-model/global-notes/dto.md

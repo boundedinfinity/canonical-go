@@ -30,6 +30,6 @@ A [DTO](dto.md) has its own `Validate` method that follows the same rule: all of
 its validation is written out in full, even where it repeats the model's.
 
 The one exception is a DTO whose fields are identical to its model's (a model
-that holds no other **Top Level Model**). It may delegate to the model's
+that holds no other **Entity**). It may delegate to the model's
 `Validate`, because the rules are the same by definition, so there is nothing
 to keep in sync.

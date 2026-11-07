@@ -9,8 +9,8 @@ import (
 	"github.com/boundedinfinity/go-commoner/functional/optioner"
 )
 
-// LabelDto is the data transfer object for Label. Label holds no other Top
-// Level Models, so LabelDto has the same fields.
+// LabelDto is the data transfer object for Label. Label holds no other
+// Entities, so LabelDto has the same fields.
 type LabelDto struct {
 	Id          id.ID                     `json:"id"`
 	Name        string                    `json:"name"`

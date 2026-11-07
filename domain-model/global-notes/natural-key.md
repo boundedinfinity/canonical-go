@@ -1,15 +1,15 @@
 # Natural Key
 
-Most **Top Level Models** are identified by a generated [Id](../id/id.md). Some
+Most **Entities** are identified by a generated [Id](../id/id.md). Some
 models are already identified by a well-known, unique code, such as the ISO 3166
 alpha-2 code of a country (`US`). Generating an Id for these would only add a
 second identifier that has to be kept in sync with the first.
 
-A **Top Level Model** marked with a **Natural Key** annotation names the field
+An **Entity** marked with a **Natural Key** annotation names the field
 that identifies it:
 
 ```markdown
-**Top Level Model**
+**Entity**
 
 **Natural Key**: `Alpha2`
 ```

@@ -1,6 +1,6 @@
 # Country
 
-**Top Level Model**
+**Entity**
 
 This is a country definition.
 

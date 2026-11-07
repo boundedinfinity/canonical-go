@@ -10,7 +10,7 @@ import (
 )
 
 // CountryCodeDto is the data transfer object for CountryCode. CountryCode
-// holds no other Top Level Models, so CountryCodeDto has the same fields.
+// holds no other Entities, so CountryCodeDto has the same fields.
 type CountryCodeDto struct {
 	Alpha2      string                  `json:"alpha-2"`
 	Alpha3      string                  `json:"alpha-3"`

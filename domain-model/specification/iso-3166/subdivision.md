@@ -1,6 +1,6 @@
 # Subdivision
 
-**Top Level Model**
+**Entity**
 
 **Natural Key**: `Code`
 

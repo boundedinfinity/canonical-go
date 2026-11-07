@@ -1,6 +1,6 @@
 # Name
 
-**Top Level Model**
+**Entity**
 
 The name of a person (can be real, fictional or otherwise)
 

@@ -4,7 +4,7 @@ package affix
 // domain-model/global-notes/dto.md
 
 // SuffixCategoryDto is the data transfer object for SuffixCategory.
-// SuffixCategory holds no other Top Level Models, so SuffixCategoryDto has
+// SuffixCategory holds no other Entities, so SuffixCategoryDto has
 // the same fields, validation, and JSON encoding, all from the embedded
 // Category.
 type SuffixCategoryDto struct {

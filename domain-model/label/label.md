@@ -1,6 +1,6 @@
 # Label
 
-**Top Level Model**
+**Entity**
 
 This is a label for a document. These are user defined labels.
 

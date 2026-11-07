@@ -1,6 +1,6 @@
 # Prefix
 
-**Top Level Model**
+**Entity**
 
 Use the [affix](affix.md) for the details of this type.
 

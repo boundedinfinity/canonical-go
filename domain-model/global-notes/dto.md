@@ -1,8 +1,8 @@
 # Data Transfer Objects (DTO)
 
-Every **Top Level Model** has a matching Data Transfer Object (DTO). A DTO has
-the same fields as its model, except that any field holding another **Top Level
-Model** holds that model's [Id](../id/id.md) instead of embedding it.
+Every **Entity** has a matching Data Transfer Object (DTO). A DTO has the same
+fields as its model, except that any field holding another **Entity** holds
+that model's [Id](../id/id.md) instead of embedding it.
 
 A DTO lets a model be stored or sent without copying the models it refers to.
 Each referenced model is stored once in its own table (see
@@ -12,13 +12,13 @@ The DTO is derived from the model's spec. Individual specs do not describe it.
 
 ## Rules
 
-- **References become IDs.** A field whose type is a **Top Level Model** becomes
+- **References become IDs.** A field whose type is an **Entity** becomes
   an [Id](../id/id.md). The cardinality is kept: a single model becomes a single
   ID, and a `List` of models becomes a `List` of IDs. If the referenced model
   has a [Natural Key](natural-key.md), the field holds that key's value instead
   of an Id (e.g. a Country reference holds `"US"`).
 - **Other fields are unchanged.** Scalars, lists of scalars, and models that are
-  *not* **Top Level Models** (e.g. [Affix](../person/affix/affix.md) or
+  *not* **Entities** (e.g. [Affix](../person/affix/affix.md) or
   [Category](../person/affix/category.md), which are base types) are copied
   exactly as the model declares them.
 - **Optionality is unchanged.** An optional reference is an optional ID (or an
@@ -31,8 +31,7 @@ The DTO is derived from the model's spec. Individual specs do not describe it.
   referenced list must contain at least 1 element if present. Cross-field rules
   from the spec's `# Validation` section also apply.
 - **Models with no references still get a DTO.** Their DTO has the same fields
-  as the model, so callers can always use the DTO form of any **Top Level
-  Model**.
+  as the model, so callers can always use the DTO form of any **Entity**.
 
 ## Example
 

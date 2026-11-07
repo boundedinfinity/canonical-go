@@ -1,6 +1,6 @@
 # Country Code
 
-**Top Level Model**
+**Entity**
 
 **Natural Key**: `Alpha2`
 
