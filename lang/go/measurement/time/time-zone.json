@@ -1,0 +1,50 @@
+[
+    {
+        "identifier": "America/Chicago",
+        "name": "Central Standard Time",
+        "abbreviation": "CST",
+        "utc-offset": "-06:00"
+    },
+    {
+        "identifier": "America/Denver",
+        "name": "Mountain Standard Time",
+        "abbreviation": "MST",
+        "utc-offset": "-07:00"
+    },
+    {
+        "identifier": "America/Halifax",
+        "name": "Atlantic Standard Time",
+        "abbreviation": "AST",
+        "utc-offset": "-04:00"
+    },
+    {
+        "identifier": "America/Los_Angeles",
+        "name": "Pacific Standard Time",
+        "abbreviation": "PST",
+        "utc-offset": "-08:00"
+    },
+    {
+        "identifier": "America/New_York",
+        "name": "Eastern Standard Time",
+        "abbreviation": "EST",
+        "utc-offset": "-05:00"
+    },
+    {
+        "identifier": "Asia/Kolkata",
+        "name": "India Standard Time",
+        "abbreviation": "IST",
+        "utc-offset": "+05:30"
+    },
+    {
+        "identifier": "Etc/UTC",
+        "name": "Coordinated Universal Time",
+        "abbreviation": "UTC",
+        "utc-offset": "+00:00"
+    },
+    {
+        "identifier": "Europe/London",
+        "name": "Greenwich Mean Time",
+        "abbreviation": "GMT",
+        "utc-offset": "+00:00"
+    }
+]
